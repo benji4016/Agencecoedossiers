@@ -1,0 +1,319 @@
+/* 🎨 Palette principale de couleurs et police */
+:root {
+  --color-black: #000000;
+  --color-green-dark: #255919;
+  --color-neon: #C8FF00;
+  --color-green: #469B61;
+  --color-grey: #868686;
+  --color-light: #F4F6F5;
+  --color-footer-links: #183A43;
+  --color-footer-bg: #0C2227;
+  --color-orange: #FFAA00;
+  --font-main: 'Poppins', sans-serif;
+}
+
+/* ✅ RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--color-black);
+  background-color: var(--color-light);
+}
+
+/* ✅ HEADER FIXE */
+header {
+  background-color: var(--color-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--color-green-dark);
+  text-decoration: none;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+.menu li a {
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+  color: var(--color-green);
+  text-decoration: underline;
+}
+
+/* ✅ BURGER MENU RESPONSIVE */
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-green-dark);
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    width: 180px;
+    border-radius: 6px;
+    padding: 1rem;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li a {
+    color: white;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+/* ✅ MAIN (évite l’overlap avec header) */
+main {
+  padding-top: 100px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+h1, h2 {
+  color: var(--color-green-dark);
+  margin-bottom: 1rem;
+}
+
+/* ✅ ACCUEIL FULLSCREEN IMAGE */
+#accueil {
+  background-image: url('../assets/rodion-kutsaev-049M_crau5k-unsplash-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 2.5px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+#accueil h1 {
+  text-align: right;
+  font-size: 2rem;
+  max-width: 80%;
+}
+
+#accueil .blanc {
+  color: var(--color-light);
+  display: block;
+}
+
+#accueil .vert {
+  color: var(--color-neon);
+  display: block;
+}
+
+/* ✅ SECTION TEAM */
+.team-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.team-section h2 {
+  font-size: 3rem;
+  color: var(--color-green);
+  margin-bottom: 2rem;
+}
+
+.team-intro {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.team-member {
+  width: 200px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-name {
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: var(--color-black);
+}
+
+.member-desc {
+  font-size: 0.95rem;
+  color: var(--color-grey);
+  margin-top: 8px;
+}
+
+/* ✅ SLIDER ARTICLES / IMAGES */
+.slider {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.slider img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* ✅ ARTICLES */
+#last-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.article-card {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.article-card h3,
+.article-card a {
+  color: var(--color-green-dark);
+}
+
+.article-card a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ✅ SATISFACTION */
+.satisfaction-section {
+  background-color: var(--color-footer-links);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.stats-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.stat-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 150px;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-neon);
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  color: var(--color-light);
+  margin-top: 10px;
+}
+
+/* ✅ SERVICES */
+.services-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.services-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 150px;
+}
+
+.service-block p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  min-width: 250px;
+  max-width: 300px;
+  flex: 1 1 250px;
+}
+
+.service-block img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* ✅ FOOTER */
+footer {
+  background-color: var(--color-green-dark);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}

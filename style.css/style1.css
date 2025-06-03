@@ -1,0 +1,502 @@
+/* 🎨 Palette principale de couleurs et police */
+:root {
+  --color-black: #000000;
+  --color-green-dark: #255919;
+  --color-neon: #C8FF00;
+  --color-green: #469B61;
+  --color-grey: #868686;
+  --color-light: #F4F6F5;
+  --color-footer-links: #183A43;
+  --color-footer-bg: #0C2227;
+  --color-orange: #FFAA00;
+  --font-main: 'Poppins', sans-serif;
+}
+
+/* ✅ RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--color-black);
+  background-color: var(--color-light);
+}
+
+/* ✅ HEADER FIXE */
+header {
+  background-color: var(--color-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--color-green-dark);
+  text-decoration: none;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu li a {
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+  color: var(--color-green);
+  text-decoration: underline;
+}
+
+/* ✅ BURGER MENU RESPONSIVE */
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-green-dark);
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    width: 180px;
+    border-radius: 6px;
+    padding: 1rem;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li a {
+    color: white;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+/* ✅ MAIN (évite l’overlap avec header) */
+main {
+  padding-top: 100px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+h1, h2 {
+  color: var(--color-green-dark);
+  margin-bottom: 1rem;
+}
+
+/* Navigation principale */
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo a {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #255919; /* Vert souhaité */
+  text-decoration: none;
+}
+
+
+
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  margin-left: 400px;
+  padding: 0;
+  
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #255919;
+}
+
+/* Burger (optionnel pour mobile plus tard) */
+.burger {
+  display: none;
+}
+
+
+/* ✅ ACCUEIL FULLSCREEN IMAGE + TEXTE EN BAS */
+#accueil {
+  background-image: url('rodion-kutsaev-049M_crau5k-unsplash-1.jpg'); /* à adapter */
+  background-size: cover; /* couvre tout l'élément */
+  background-position: center;  ;
+  background-repeat: no-repeat;   ;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 2.5px;
+
+
+  display: flex;
+  align-items: flex-end;  ;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+#accueil h1 {
+  text-align: right;
+  font-size: 2rem;
+  max-width: 80%;
+}
+
+#accueil .blanc {
+  color: var(--color-light);
+  display: block;
+}
+
+#accueil .vert {
+  color: var(--color-neon);
+  display: block;
+}
+
+/* ✅ SECTION TEAM OU AUTRES */
+section {
+  margin-bottom: 3rem;
+}
+
+.team {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.team h2 {
+  font-size: 3.3rem;
+  font-weight: 500;
+  color: #469B61; /* Vert écolo */
+  margin-bottom: 2.5rem;
+}
+
+.team p {
+  max-width: 700px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: auto;
+  color: #000000
+}
+
+/* ✅ SLIDER ARTICLE / IMAGES HORIZONTALES */
+.slider {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.slider img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* ✅ ARTICLES */
+#last-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.article-card {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.article-card h3 {
+  color: var(--color-green-dark);
+  margin-bottom: 0.5rem;
+}
+
+.article-card a {
+  color: var(--color-green-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ✅ FOOTER */
+footer {
+  background-color: var(--color-green-dark);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.team-section {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+}
+
+.team-section h2 {
+  font-size: 3em;;
+  text-align: center;
+  margin-bottom: 600px;
+  color: #469B61; /* Vert écolo */
+}
+
+.team-intro {
+  max-width: 600px;
+  text-align: center;
+  flex: center;
+  margin: 0 auto 40px;
+  font-size: 4em;
+  font-weight: 500;
+  color: #000000;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 250px;
+}
+
+.team-member {
+  width: 200px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: 50% 30%; /* recentrer sur le visage */
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-name {
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 1.1em;
+  color: #000000;
+}
+
+.member-desc {
+  font-size: 0.95em;
+  color: #868686;
+  margin-top: 8px;
+}
+
+.satisfaction-section {
+  background-color: #183A43; /* bande grise foncée */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.stats-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px; /* espace entre chaque bloc */
+}
+
+.stat-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 150px;
+}
+
+.stat-number {
+  font-size: 3em;
+  font-weight: bold;
+  color: #C8FF00; /* vert fluo */
+}
+
+.stat-label {
+  font-size: 1.2em;
+  color: #F4F6F5; /* blanc gris clair */
+  margin-top: 10px;
+}
+
+.services-section {
+  padding: 60px 0;
+  text-align: center;
+}
+.services-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 150px; /* espace entre chaque bloc */
+}
+.service-block p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: 600;
+  min-width: 250px;
+  max-width: 300px;
+  flex: 1 1 250px; /* permet à chaque bloc de s'étendre également */
+}
+.service-block img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#actus {
+  background-color: #f2f2f2;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#actus h2 {
+  color: #469B61;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+}
+
+#actus-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.article {
+  background-color: #469B61;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.article h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.article p {
+  color: #ffffff;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.article .date {
+  font-size: 0.9em;
+  color: #ffffff;
+}
+
+#contact {
+  background-color: #023640;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 3rem;
+  color: #C8FF00;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#contact p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #F4F6F5;
+}
+
+.contact-form {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-form input,
+.contact-form textarea {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #F4F6F5;
+}
+
+.contact-form button {
+  background-color: #C8FF00;
+  color: black;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  align-self: center;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #b5e600;
+}
+
