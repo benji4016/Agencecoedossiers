@@ -128,7 +128,7 @@ h1, h2 {
 
 /* Logo */
 .logo a {
-  font-size: 1.8rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #255919; /* Vert souhaité */
   text-decoration: none;
@@ -144,6 +144,7 @@ h1, h2 {
   margin: 0;
   margin-left: 400px;
   padding: 0;
+  font-size: 1.5rem;
   
 }
 
@@ -172,7 +173,7 @@ h1, h2 {
   background-repeat: no-repeat;
 
   width: 100%; /* Largeur de l'écran */
-  height: 100vh ; /* Hauteur de l'écran */
+  height: 1440px ; /* Hauteur de l'écran */
   min-height: 100vh; /* Assure que la section prend au moins la hauteur de l'écran */
 
 
@@ -186,22 +187,24 @@ h1, h2 {
 
 
 #accueil h1 {
-  text-align: right;
   font-size: 4rem;
   max-width: 80%;
-margin-bottom: 4rem;
-  padding-right: 10rem; /*<-espace intérieur à droite*/
-  margin-top: -1rem; /*<- fait remonter le titre */
+  margin-bottom: 8rem;
+  padding-right: 15rem; /*<-espace intérieur à droite*/
 }
 
 #accueil .blanc {
+  text-align:  right;
   color: var(--color-light);
   display: block;
+  font-size: 3.5rem;
 }
 
 #accueil .vert {
+  text-align: center;
   color: var(--color-neon);
   display: block;
+  font-size: 5rem;
 }
 
 /* ✅ SECTION TEAM OU AUTRES */
@@ -211,7 +214,7 @@ section {
 
 .team {
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 2rem 0rem;
 }
 
 .team h2 {
