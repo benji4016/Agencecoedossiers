@@ -500,3 +500,16 @@ footer {
   background-color: #b5e600;
 }
 
+
+
+
+
+/* Navigation principale */
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

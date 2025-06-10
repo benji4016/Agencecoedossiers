@@ -20,23 +20,25 @@
 }
 
 body {
+  align-self: auto;;
   font-family: var(--font-main);
-  line-height: 1.6;
+  line-height: 2;
   color: var(--color-black);
   background-color: var(--color-light);
 }
 
+
 /* ✅ HEADER FIXE */
+.container
 header {
   background-color: var(--color-light);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -101,10 +103,7 @@ header {
 
 /* ✅ MAIN (évite l’overlap avec header) */
 main {
-  padding-top: 100px;
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
+  margin: 0 ;
 }
 
 h1, h2 {
@@ -118,13 +117,18 @@ h1, h2 {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
+
 
 /* Logo */
 .logo a {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #255919; /* Vert souhaité */
   text-decoration: none;
@@ -162,25 +166,32 @@ h1, h2 {
 
 /* ✅ ACCUEIL FULLSCREEN IMAGE + TEXTE EN BAS */
 #accueil {
-  background-image: url('assets/rodion-kutsaev-049M_crau5k-unsplash-1.jpg')/* à adapter */
-  background-size: cover; /* couvre tout l'élément */
-  background-position: center;  ;
-  background-repeat: no-repeat;   ;
-  width: 100%;
-  height: 100vh;
-  margin-bottom: 2.5px;
+  background-image: url('/assets/rodion-kutsaev-049M_crau5k-unsplash-1.jpg'); /* à adapter si besoin */;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%; /* Largeur de l'écran */
+  height: 100vh ; /* Hauteur de l'écran */
+  min-height: 100vh; /* Assure que la section prend au moins la hauteur de l'écran */
 
 
   display: flex;
-  align-items: flex-end;  ;
+  align-items: flex-end;
   justify-content: flex-end;
-  padding: 2rem;
+  margin: 0;
 }
+
+
+
 
 #accueil h1 {
   text-align: right;
-  font-size: 2rem;
+  font-size: 4rem;
   max-width: 80%;
+margin-bottom: 4rem;
+  padding-right: 10rem; /*<-espace intérieur à droite*/
+  margin-top: -1rem; /*<- fait remonter le titre */
 }
 
 #accueil .blanc {
@@ -290,7 +301,7 @@ footer {
 .team-intro {
   max-width: 600px;
   text-align: center;
-  flex: center;
+  flex: 1 1 300px; /* permet à l'introduction de s'étendre */
   margin: 0 auto 40px;
   font-size: 4em;
   font-weight: 500;
