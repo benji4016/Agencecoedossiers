@@ -142,7 +142,7 @@ h1, h2 {
   display: flex;
   gap: 1.5rem;
   margin: 0;
-  margin-left: 400px;
+  margin-left: 30rem;
   padding: 0;
   font-size: 1.5rem;
   
@@ -225,8 +225,8 @@ section {
 }
 
 .team p {
-  max-width: 700px;
-  font-size: 1.5rem;
+  max-width: 106rem;
+  font-size: 2rem;
   font-weight: 500;
   margin: auto;
   color: #000000
@@ -295,7 +295,7 @@ footer {
 }
 
 .team-section h2 {
-  font-size: 3em;;
+  font-size: 3rem;;
   text-align: center;
   margin-bottom: 600px;
   color: #469B61; /* Vert écolo */
@@ -319,7 +319,7 @@ footer {
 }
 
 .team-member {
-  width: 200px;
+  width: 24.5rem; /* largeur de chaque membre */
   text-align: center;
 }
 
@@ -355,7 +355,7 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 80px; /* espace entre chaque bloc */
+  gap: 18rem; /* espace entre chaque bloc */
 }
 
 .stat-block {
