@@ -14,503 +14,505 @@
 
 /* ✅ RESET */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les espacements par défaut */
+  box-sizing: border-box; /* Assure que la largeur et la hauteur incluent le padding et la bordure */
 }
 
 body {
-  align-self: auto;;
-  font-family: var(--font-main);
-  line-height: 2;
-  color: var(--color-black);
-  background-color: var(--color-light);
+  align-self: auto; /* Permet à l'élément body de s'ajuster à son contenu */
+  font-family: var(--font-main); /* Utilise la police définie dans :root */
+  line-height: 2; /* Hauteur de ligne pour une meilleure lisibilité */
+  color: var(--color-black); /* Couleur du texte principale */
+  background-color: var(--color-light); /* Couleur de fond principale */
 }
 
 
 /* ✅ HEADER FIXE */
 .container
 header {
-  background-color: var(--color-light);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-light); /* Couleur de fond du header */ 
+  display: flex; /* Utilise Flexbox pour l'alignement */
+  align-items: center; /* Centre verticalement les éléments */
+  justify-content: space-between; /* Espace entre les éléments */
+  position: fixed; /* Fixe le header en haut de la page */
+  top: 0; /* Positionne le header en haut */
+  width: 100%; /* Prend toute la largeur de l'écran */
+  z-index: 1000; /* Assure que le header est au-dessus des autres éléments */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour un effet de profondeur */
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: var(--color-green-dark);
-  text-decoration: none;
+  font-weight: bold; /* Met le texte en gras */
+  font-size: 1.5rem; /* Taille de la police du logo */
+  color: var(--color-green-dark); /* Couleur du texte du logo */
+  text-decoration: none; /* Supprime le soulignement du lien */  
 }
 
 .menu {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+  list-style: none; /* Supprime les puces de la liste */
+  display: flex; /* Affiche les éléments du menu en ligne */
+  gap: 1.5rem; /* Espace entre les éléments du menu */
 }
 
 .menu li a {
-  color: var(--color-black);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
+  color: var(--color-black); /* Couleur du texte des liens du menu */
+  text-decoration: none; /* Supprime le soulignement des liens */
+  font-weight: 500; /* Met le texte en semi-gras */
+  transition: color 0.2s; /* Transition douce pour le changement de couleur */
 }
 
 .menu li a:hover,
 .menu li a:focus {
-  color: var(--color-green);
-  text-decoration: underline;
+  color: var(--color-green); /* Couleur du texte au survol ou au focus */
+  text-decoration: underline; /* Souligne le texte au survol ou au focus */
 }
 
 /* ✅ BURGER MENU RESPONSIVE */
 .burger {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
+  display: none; /* Masque le burger menu par défaut */
+  font-size: 1.8rem; /* Taille de la police du burger menu */
+  cursor: pointer; /* Curseur en forme de main pour indiquer que c'est cliquable */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
   .menu {
-    display: none;
-    flex-direction: column;
-    background-color: var(--color-green-dark);
-    position: absolute;
-    top: 60px;
-    right: 2rem;
-    width: 180px;
-    border-radius: 6px;
-    padding: 1rem;
+    display: none; /* Masque le menu principal sur les écrans plus petits */
+    flex-direction: column; /* Affiche les éléments du menu en colonne */
+    background-color: var(--color-green-dark); /* Couleur de fond du menu */
+    position: absolute; /* Positionne le menu de manière absolue */ 
+    top: 60px; /* Positionne le menu juste en dessous du header */
+    right: 2rem; /* Positionne le menu à droite */
+    width: 180px; /* Largeur du menu */
+    border-radius: 6px; /* Bords arrondis du menu */
+    padding: 1rem; /* Espace intérieur du menu */
   }
 
   .menu.active {
-    display: flex;
+    display: flex; /* Affiche le menu lorsque la classe active est ajoutée */
   }
 
   .menu li a {
-    color: white;
+    color: white; /* Couleur du texte des liens du menu dans le burger */
   }
 
   .burger {
-    display: block;
+    display: block; /* Affiche le burger menu sur les écrans plus petits */
   }
 }
 
 /* ✅ MAIN (évite l’overlap avec header) */
 main {
-  margin: 0 ;
+  margin: 0 ; /* Supprime les marges par défaut */
 }
 
 h1, h2 {
-  color: var(--color-green-dark);
-  margin-bottom: 1rem;
+  color: var(--color-green-dark); /* Couleur des titres */
+  margin-bottom: 1rem; /* Espace en dessous des titres */
 }
 
 /* Navigation principale */
 #main-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  display: flex; /* Utilise Flexbox pour l'alignement */
+  justify-content: space-between; /* Espace entre les éléments */
+  align-items: center; /* Centre verticalement les éléments */
+  padding: 1rem 2rem; /* Espace intérieur du header */
 
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
+  background-color: #fff; /* Couleur de fond du header */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour un effet de profondeur */
+  position: fixed; /* Fixe le header en haut de la page */
+  width: 100%; /* Prend toute la largeur de l'écran */
+  z-index: 1000; /* Assure que le header est au-dessus des autres éléments */
 }
 
 
 /* Logo */
 .logo a {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 3rem; /* Taille de la police du logo */
+  font-weight: bold; /* Met le texte en gras */
   color: #255919; /* Vert souhaité */
-  text-decoration: none;
+  text-decoration: none; /* Supprime le soulignement du lien */
 }
 
 
 
-/* Menu */
+/* Menu */ 
 .menu {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  margin-left: 400px;
-  padding: 0;
-  font-size: 1.5rem;
+  list-style: none; /* Supprime les puces */
+  display: flex; /* Affiche les éléments du menu en ligne */
+  gap: 1.5rem; /* Espace entre les éléments du menu */
+  margin: 0; /* Supprime la marge par défaut */
+  margin-left: 20rem; /* Ajustement pour l'espacement */
+  padding: 0; /* Supprime le padding par défaut */
+  font-size: 1.5rem; /* Taille de police du menu */
   
 }
 
 .menu li a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  text-decoration: none; /* Supprime le soulignement des liens */
+  color: #000000; /* Couleur du texte des liens du menu */
+  font-weight: 500; /* Met le texte en semi-gras */
+  transition: color 0.3s ease; /* Transition douce pour le changement de couleur */
 }
 
 .menu li a:hover {
-  color: #255919;
+  color: #255919; /* Couleur du texte au survol */
 }
 
 /* Burger (optionnel pour mobile plus tard) */
 .burger {
-  display: none;
+  display: none; /* Masque le burger menu par défaut */
 }
 
 
 /* ✅ ACCUEIL FULLSCREEN IMAGE + TEXTE EN BAS */
 #accueil {
   background-image: url('/assets/rodion-kutsaev-049M_crau5k-unsplash-1.jpg'); /* à adapter si besoin */;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover; /* Couvre toute la section */
+  background-position: center; /* Centre l'image de fond */
+  background-repeat: no-repeat; /* Ne répète pas l'image de fond */
 
   width: 100%; /* Largeur de l'écran */
   height: 1440px ; /* Hauteur de l'écran */
   min-height: 100vh; /* Assure que la section prend au moins la hauteur de l'écran */
 
 
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  margin: 0;
+  display: flex; /* Utilise Flexbox pour l'alignement */
+  align-items: flex-end; /* Centre verticalement les éléments */
+  justify-content: flex-end; /* Centre horizontalement les éléments */
+  margin: 0; /* Supprime les marges par défaut */
 }
 
 
 
 
 #accueil h1 {
-  font-size: 4rem;
-  max-width: 80%;
-  margin-bottom: 8rem;
-  padding-right: 15rem; /*<-espace intérieur à droite*/
+  font-size: 4rem; /* Taille de la police du titre */
+  max-width: 80%; /* Limite la largeur du titre */
+  margin-bottom: 8rem; /* Espace en dessous du titre */
+  padding-right: 15rem; /*<-espace intérieur à droite*/ 
 }
 
 #accueil .blanc {
-  text-align:  right;
-  color: var(--color-light);
-  display: block;
-  font-size: 3.5rem;
+  text-align:  right; /* Alignement du texte à droite */
+  color: var(--color-light); /* Couleur du texte blanc */
+  display: block; /* Affiche le texte en bloc */
+  font-size: 3.5rem; /* Taille de la police du texte blanc */
 }
 
 #accueil .vert {
-  text-align: center;
-  color: var(--color-neon);
-  display: block;
-  font-size: 5rem;
+  text-align: center; /* Alignement du texte au centre */
+  color: var(--color-neon); /* Couleur du texte vert */
+  display: block; /* Affiche le texte en bloc */
+  font-size: 5rem; /* Taille de la police du texte vert */
 }
 
 /* ✅ SECTION TEAM OU AUTRES */
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 3rem; /* Espace en dessous de chaque section */
 }
 
 .team {
-  text-align: center;
-  padding: 2rem 0rem;
+  text-align: center; /* Centre le texte de la section */
+  padding: 2rem 0rem; /* Espace intérieur de la section */
 }
 
 .team h2 {
-  font-size: 3.3rem;
-  font-weight: 500;
+  font-size: 3.3rem; /* Taille de la police du titre de la section */
+  font-weight: 500; /* Poids de la police du titre */
   color: #469B61; /* Vert écolo */
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem; /* Espace en dessous du titre */
 }
 
 .team p {
-  max-width: 700px;
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin: auto;
-  color: #000000
+  max-width: 106rem; /* Largeur maximale du paragraphe */
+  font-size: 2rem; /* Taille de la police du paragraphe */
+  font-weight: 500; /* Poids de la police du paragraphe */
+  margin: auto; /* Centre le paragraphe */
+  color: #000000 ; /* Couleur du texte du paragraphe */
 }
 
 /* ✅ SLIDER ARTICLE / IMAGES HORIZONTALES */
-.slider {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 10px 0;
+.slider { 
+  display: flex; /* Utilise Flexbox pour l'alignement */
+  gap: 10px; /* Espace entre les images */
+  overflow-x: auto; /* Permet le défilement horizontal */
+  scroll-behavior: smooth; /* Défilement fluide */
+  padding: 10px 0; /* Espace intérieur en haut et en bas */
 }
 
 .slider img {
-  width: 300px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  flex-shrink: 0;
+  width: 300px; /* Largeur de chaque image */
+  height: auto; /* Hauteur automatique pour conserver les proportions */
+  object-fit: cover; /* Couvre l'image sans déformer */
+  border-radius: 10px; /* Bords arrondis des images */
+  flex-shrink: 0; /* Empêche les images de rétrécir */
 }
 
 .slider::-webkit-scrollbar {
-  display: none;
+  display: none; /* Masque la barre de défilement pour un look plus propre */
 }
 
 /* ✅ ARTICLES */
 #last-articles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 0 1rem;
+  display: grid; /* Utilise Grid pour l'alignement des articles */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Crée des colonnes flexibles */
+  gap: 1.5rem; /* Espace entre les articles */
+  padding: 0 1rem; /* Espace intérieur à gauche et à droite */
 }
 
 .article-card {
-  background-color: #f5f5f5;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  background-color: #f5f5f5; /* Couleur de fond des cartes d'articles */
+  padding: 1rem; /* Espace intérieur des cartes */
+  border-radius: 8px; /* Bords arrondis des cartes */
+  box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Ombre pour un effet de profondeur */
 }
 
 .article-card h3 {
-  color: var(--color-green-dark);
-  margin-bottom: 0.5rem;
+  color: var(--color-green-dark); /* Couleur du titre des articles */
+  margin-bottom: 0.5rem; /* Espace en dessous du titre */
 }
 
 .article-card a {
-  color: var(--color-green-dark);
-  text-decoration: none;
-  font-weight: 600;
+  color: var(--color-green-dark); /* Couleur des liens des articles */
+  text-decoration: none; /* Supprime le soulignement des liens */
+  font-weight: 600; /* Met le texte en semi-gras */
 }
 
 /* ✅ FOOTER */
 footer {
-  background-color: var(--color-green-dark);
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
+  background-color: var(--color-green-dark); /* Couleur de fond du footer */
+  color: white; /* Couleur du texte du footer */
+  text-align: center; /* Centre le texte du footer */
+  padding: 1rem 0; /* Espace intérieur du footer */
+  font-size: 0.9rem; /* Taille de la police du footer */
 }
 
 .team-section {
-  text-align: center;
-  padding: 10px 20px;
-  background-color: #f9f9f9;
+  text-align: center; /* Centre le texte de la section équipe */
+  padding: 10px 20px; /* Espace intérieur de la section équipe */
+  background-color: #f9f9f9; /* Couleur de fond de la section équipe */
 }
 
 .team-section h2 {
-  font-size: 3em;;
-  text-align: center;
-  margin-bottom: 600px;
+  font-size: 3rem; /* Taille de la police du titre de la section équipe */
+  text-align: center; /* Centre le titre de la section équipe */
+  margin-bottom: 600px; /* Espace en dessous du titre de la section équipe */
   color: #469B61; /* Vert écolo */
 }
 
 .team-intro {
-  max-width: 600px;
-  text-align: center;
+  max-width: 600px; /* Largeur maximale de l'introduction */
+  text-align: center; /* Centre le texte de l'introduction */
   flex: 1 1 300px; /* permet à l'introduction de s'étendre */
-  margin: 0 auto 40px;
-  font-size: 4em;
-  font-weight: 500;
-  color: #000000;
+  margin: 0 auto 40px; /* Centre l'introduction horizontalement et ajoute un espace en dessous */
+  font-size: 4em; /* Taille de la police de l'introduction */
+  font-weight: 500; /* Poids de la police de l'introduction */
+  color: #000000; /* Couleur du texte de l'introduction */
 }
 
 .team-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 250px;
+  display: flex; /* Utilise Flexbox pour l'alignement des membres de l'équipe */
+  justify-content: center; /* Centre les membres de l'équipe horizontalement */
+  flex-wrap: wrap; /* Permet aux membres de l'équipe de passer à la ligne si nécessaire */
+  gap: 250px; /* Espace entre chaque membre de l'équipe */
 }
 
 .team-member {
-  width: 200px;
-  text-align: center;
+  width: 24.5rem; /* largeur de chaque membre */
+  text-align: center; /* Centre le texte de chaque membre */
 }
 
 .team-member img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
+  width: 250px; /* largeur de l'image du membre */
+  height: 250px; /* hauteur de l'image du membre */
+  object-fit: cover; /* Couvre l'image sans déformer */
   object-position: 50% 30%; /* recentrer sur le visage */
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 50%; /* Bords arrondis de l'image du membre */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
 }
 
 .member-name {
-  font-weight: 600;
-  margin-top: 15px;
-  font-size: 1.1em;
-  color: #000000;
+  font-weight: 600; /* Met le nom du membre en semi-gras */
+  margin-top: 15px; /* Espace en dessous du nom du membre */
+  font-size: 1.1em; /* Taille de la police du nom du membre */
+  color: #000000; /* Couleur du texte du nom du membre */   
 }
 
 .member-desc {
-  font-size: 0.95em;
-  color: #868686;
-  margin-top: 8px;
+  font-size: 0.95em; /* Taille de la police de la description du membre */
+  color: #868686; /* Couleur du texte de la description du membre */
+  margin-top: 8px; /* Espace en dessous de la description du membre */
 }
 
 .satisfaction-section {
   background-color: #183A43; /* bande grise foncée */
-  padding: 60px 0;
-  text-align: center;
+  padding: 60px 0; /* espace intérieur en haut et en bas */
+  text-align: center; /* centre le texte */
 }
 
-.stats-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 80px; /* espace entre chaque bloc */
+.stats-wrapper { 
+  display: flex; /* Utilise Flexbox pour l'alignement des statistiques */
+  justify-content: center; /* Centre les statistiques horizontalement */
+  flex-wrap: wrap; /* Permet aux statistiques de passer à la ligne si nécessaire */
+  gap: 18rem; /* espace entre chaque bloc */
 }
 
 .stat-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 150px;
+  display: flex; /* Utilise Flexbox pour l'alignement des statistiques */
+  flex-direction: column; /* Affiche les éléments en colonne */
+  align-items: center; /* Centre les éléments horizontalement */
+  min-width: 150px; /* largeur minimale de chaque bloc */
 }
 
 .stat-number {
-  font-size: 3em;
-  font-weight: bold;
+  font-size: 3em; /* taille de la police du nombre */
+  font-weight: bold; /* Met le nombre en gras */
   color: #C8FF00; /* vert fluo */
 }
 
 .stat-label {
-  font-size: 1.2em;
+  font-size: 1.2em; /* taille de la police de l'étiquette */
   color: #F4F6F5; /* blanc gris clair */
-  margin-top: 10px;
+  margin-top: 10px; /* espace en dessous de l'étiquette */
 }
 
 .services-section {
-  padding: 60px 0;
-  text-align: center;
+  padding: 60px 0; /* espace intérieur en haut et en bas */
+  text-align: center; /* centre le texte */
 }
 .services-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 150px; /* espace entre chaque bloc */
+  display: flex; /* Utilise Flexbox pour l'alignement des blocs de services */
+  justify-content: center; /* Centre les blocs de services horizontalement */
+  flex-wrap: wrap; /* Permet aux blocs de services de passer à la ligne si nécessaire */
+  gap: 20%; /* espace entre chaque bloc */
 }
 .service-block p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.2em;
-  font-weight: 600;
-  min-width: 250px;
-  max-width: 300px;
+  display: flex; /* Utilise Flexbox pour l'alignement du texte dans chaque bloc de service */
+  flex-direction: column; /* Affiche les éléments en colonne */
+  align-items: center; /* Centre les éléments horizontalement */
+  font-size: 1.2em; /* taille de la police du texte */
+  font-weight: 600; /* Met le texte en semi-gras */
+  min-width: 250px; /* largeur minimale de chaque bloc */
+  max-width: 300px; /* largeur maximale de chaque bloc */
   flex: 1 1 250px; /* permet à chaque bloc de s'étendre également */
 }
 .service-block img {
-  width: 500px;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 50%;
+  width: 40rem; /* largeur de l'image */    
+  height: 40rem; /* hauteur de l'image */
+  object-fit: none; /* Ne déforme pas l'image */
+  object-position: center; /* Centre l'image */
+  border-radius: 10%; /* Bords arrondis de l'image */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Ombre pour un effet de profondeur */
 }
 
 #actus {
-  background-color: #f2f2f2;
-  padding: 60px 20px;
-  text-align: center;
+  background-color: #f2f2f2; /* Couleur de fond de la section Actus */  
+  padding: 60px 20px; /* Espace intérieur en haut et en bas */
+  text-align: center; /* Centre le texte de la section Actus */
 }
 
 #actus h2 {
-  color: #469B61;
-  font-size: 2.2em;
-  margin-bottom: 30px;
+  color: #469B61; /* Couleur du titre de la section Actus */
+  font-size: 2.2em; /* Taille de la police du titre */
+  margin-bottom: 30px; /* Espace en dessous du titre */
 }
 
 #actus-container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex; /* Utilise Flexbox pour l'alignement des articles */
+  flex-direction: column; /* Affiche les articles en colonne */
+  gap: 30px; /* Espace entre les articles */   
+  max-width: 800px; /* Largeur maximale du conteneur des articles */
+  margin: 0 auto; /* Centre le conteneur des articles horizontalement */
 }
 
 .article {
-  background-color: #469B61;
-  padding: 20px 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  text-align: left;
+  background-color: #469B61; /* Couleur de fond des articles */
+  padding: 20px 25px; /* Espace intérieur des articles */
+  border-radius: 10px; /* Bords arrondis des articles */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* Ombre pour un effet de profondeur */
+  text-align: left; /* Aligne le texte à gauche */
 }
 
 .article h3 {
-  color: #ffffff;
-  margin-bottom: 10px;
+  color: #ffffff; /* Couleur du titre de l'article */
+  margin-bottom: 10px; /* Espace en dessous du titre */  
 }
 
 .article p {
-  color: #ffffff;
-  font-size: 1em;
-  margin-bottom: 10px;
+  color: #ffffff; /* Couleur du texte de l'article */
+  font-size: 1em; /* Taille de la police du texte de l'article */
+  margin-bottom: 10px; /* Espace en dessous du texte de l'article */
 }
 
 .article .date {
-  font-size: 0.9em;
-  color: #ffffff;
+  font-size: 0.9em; /* Taille de la police de la date */
+  color: #ffffff; /* Couleur du texte de la date */
 }
 
 #contact {
-  background-color: #023640;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
+  background-color: #023640; /* Couleur de fond de la section Contact */  
+  color: white; /* Couleur du texte de la section Contact */
+  padding: 60px 20px; /* Espace intérieur en haut et en bas */
+  text-align: center; /* Centre le texte de la section Contact */
 }
 
-#contact h2 {
-  font-size: 3rem;
-  color: #C8FF00;
-  font-weight: bold;
-  margin-bottom: 10px;
+#contact h2 { 
+  font-size: 3rem; /* Taille de la police du titre de la section Contact */
+  color: #C8FF00; /* Couleur du titre de la section Contact */
+  font-weight: bold; /* Met le titre en gras */
+  margin-bottom: 10px; /* Espace en dessous du titre */
 }
 
 #contact p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  color: #F4F6F5;
+  font-size: 1.2rem; /* Taille de la police du paragraphe de la section Contact */
+  margin-bottom: 40px; /* Espace en dessous du paragraphe */
+  color: #F4F6F5; /* Couleur du texte du paragraphe de la section Contact */
 }
 
 .contact-form {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  max-width: 900px; /* Largeur maximale du formulaire de contact */
+  margin: 0 auto; /* Centre le formulaire de contact horizontalement */
+  display: flex; /* Utilise Flexbox pour l'alignement du formulaire */
+  flex-direction: column; /* Affiche les éléments du formulaire en colonne */
+  gap: 20px; /* Espace entre les éléments du formulaire */
 }
 
 .form-row {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: flex; /* Utilise Flexbox pour l'alignement des lignes du formulaire */
+  gap: 20px; /* Espace entre les champs du formulaire */
+  flex-wrap: wrap; /* Permet aux champs de passer à la ligne si nécessaire */
 }
 
 .contact-form input,
 .contact-form textarea {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  border-bottom: 2px solid white;
-  background: transparent;
-  color: white;
-  font-size: 1rem;
+  flex: 1; /* Permet aux champs de s'étendre également */
+  padding: 10px; /* Espace intérieur des champs */
+  border: none; /* Supprime la bordure par défaut */
+  border-bottom: 2px solid white; /* Bordure inférieure blanche */
+  background: transparent; /* Fond transparent pour les champs */
+  color: white; /* Couleur du texte des champs */
+  font-size: 1rem; /* Taille de la police des champs */
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #F4F6F5;
+  color: #F4F6F5; /* Couleur des placeholders des champs */
 }
 
 .contact-form button {
-  background-color: #C8FF00;
-  color: black;
-  border: none;
-  padding: 12px 30px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  align-self: center;
-  transition: background-color 0.3s;
+  background-color: #C8FF00; /* Couleur de fond du bouton */
+  color: black; /* Couleur du texte du bouton */
+  border: none; /* Supprime la bordure par défaut */
+  padding: 12px 30px; /* Espace intérieur du bouton */
+  font-size: 1rem; /* Taille de la police du bouton */
+  cursor: pointer; /* Curseur en forme de main pour indiquer que c'est cliquable */
+  border-radius: 5px; /* Bords arrondis du bouton */
+  align-self: center; /* Centre le bouton horizontalement */
+  transition: background-color 0.3s; /* Transition douce pour le changement de couleur */
 }
 
 .contact-form button:hover {
-  background-color: #b5e600;
+  background-color: #b5e600; /* Couleur de fond du bouton au survol */
 }
 
