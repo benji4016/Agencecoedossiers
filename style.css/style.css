@@ -215,6 +215,7 @@ section {
 .team {
   text-align: center; /* Centre le texte de la section */
   padding: 2rem 0rem; /* Espace intérieur de la section */
+  background-color: snow; /* Couleur de fond de la section */
 }
 
 .team h2 {
@@ -222,6 +223,7 @@ section {
   font-weight: 500; /* Poids de la police du titre */
   color: #469B61; /* Vert écolo */
   margin-bottom: 2.5rem; /* Espace en dessous du titre */
+  background-color: snow; /* Couleur de fond du titre */
 }
 
 .team p {
@@ -380,6 +382,7 @@ footer {
 .services-section {
   padding: 60px 0; /* espace intérieur en haut et en bas */
   text-align: center; /* centre le texte */
+  background-color: snow; /* couleur de fond de la section Services */
 }
 .services-wrapper {
   display: flex; /* Utilise Flexbox pour l'alignement des blocs de services */
@@ -391,10 +394,10 @@ footer {
   display: flex; /* Utilise Flexbox pour l'alignement du texte dans chaque bloc de service */
   flex-direction: column; /* Affiche les éléments en colonne */
   align-items: center; /* Centre les éléments horizontalement */
-  font-size: 1.2em; /* taille de la police du texte */
+  font-size: 2.2em; /* taille de la police du texte */
   font-weight: 600; /* Met le texte en semi-gras */
-  min-width: 250px; /* largeur minimale de chaque bloc */
-  max-width: 300px; /* largeur maximale de chaque bloc */
+  min-width: 30rem; /* largeur minimale de chaque bloc */
+  max-width: 30rem; /* largeur maximale de chaque bloc */
   flex: 1 1 250px; /* permet à chaque bloc de s'étendre également */
 }
 .service-block img {
