@@ -24,7 +24,7 @@ body {
   font-family: var(--font-main); /* Utilise la police définie dans :root */
   line-height: 2; /* Hauteur de ligne pour une meilleure lisibilité */
   color: var(--color-black); /* Couleur du texte principale */
-  background-color: var(--color-light); /* Couleur de fond principale */
+  background-color: snow ; /* Couleur de fond principale */
 }
 
 
@@ -108,7 +108,7 @@ main {
 
 h1, h2 {
   color: var(--color-green-dark); /* Couleur des titres */
-  margin-bottom: 1rem; /* Espace en dessous des titres */
+  margin-bottom: 4rem; /* Espace en dessous des titres */
 }
 
 /* Navigation principale */
@@ -128,7 +128,7 @@ h1, h2 {
 
 /* Logo */
 .logo a {
-  font-size: 3rem; /* Taille de la police du logo */
+  font-size: 4rem; /* Taille de la police du logo */
   font-weight: bold; /* Met le texte en gras */
   color: #255919; /* Vert souhaité */
   text-decoration: none; /* Supprime le soulignement du lien */
@@ -140,7 +140,7 @@ h1, h2 {
 .menu {
   list-style: none; /* Supprime les puces */
   display: flex; /* Affiche les éléments du menu en ligne */
-  gap: 1.5rem; /* Espace entre les éléments du menu */
+  gap: 3.5rem; /* Espace entre les éléments du menu */
   margin: 0; /* Supprime la marge par défaut */
   margin-left: 20rem; /* Ajustement pour l'espacement */
   padding: 0; /* Supprime le padding par défaut */
@@ -210,6 +210,7 @@ h1, h2 {
 /* ✅ SECTION TEAM OU AUTRES */
 section {
   margin-bottom: 3rem; /* Espace en dessous de chaque section */
+  padding: 0rem; /* Espace intérieur de la section */
 }
 
 .team {
@@ -317,7 +318,7 @@ footer {
   display: flex; /* Utilise Flexbox pour l'alignement des membres de l'équipe */
   justify-content: center; /* Centre les membres de l'équipe horizontalement */
   flex-wrap: wrap; /* Permet aux membres de l'équipe de passer à la ligne si nécessaire */
-  gap: 250px; /* Espace entre chaque membre de l'équipe */
+  gap: 15%; /* Espace entre chaque membre de l'équipe */
 }
 
 .team-member {
@@ -349,8 +350,8 @@ footer {
 
 .satisfaction-section {
   background-color: #183A43; /* bande grise foncée */
-  padding: 60px 0; /* espace intérieur en haut et en bas */
   text-align: center; /* centre le texte */
+  background-size: cover; /* couvre toute la section */
 }
 
 .stats-wrapper { 
@@ -380,7 +381,7 @@ footer {
 }
 
 .services-section {
-  padding: 60px 0; /* espace intérieur en haut et en bas */
+  padding: 0; /* espace intérieur en haut et en bas */
   text-align: center; /* centre le texte */
   background-color: snow; /* couleur de fond de la section Services */
 }
@@ -401,9 +402,9 @@ footer {
   flex: 1 1 250px; /* permet à chaque bloc de s'étendre également */
 }
 .service-block img {
-  width: 40rem; /* largeur de l'image */    
-  height: 40rem; /* hauteur de l'image */
-  object-fit: none; /* Ne déforme pas l'image */
+  width: 50%; /* largeur de l'image */    
+  height: auto; /* hauteur de l'image */
+  object-fit: cover; /* Ne déforme pas l'image */
   object-position: center; /* Centre l'image */
   border-radius: 10%; /* Bords arrondis de l'image */
   box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Ombre pour un effet de profondeur */
@@ -424,8 +425,8 @@ footer {
 #actus-container {
   display: flex; /* Utilise Flexbox pour l'alignement des articles */
   flex-direction: column; /* Affiche les articles en colonne */
-  gap: 30px; /* Espace entre les articles */   
-  max-width: 800px; /* Largeur maximale du conteneur des articles */
+  gap: 15%; /* Espace entre les articles */   
+  max-width: 100%; /* Largeur maximale du conteneur des articles */
   margin: 0 auto; /* Centre le conteneur des articles horizontalement */
 }
 
@@ -511,7 +512,7 @@ footer {
   font-size: 1rem; /* Taille de la police du bouton */
   cursor: pointer; /* Curseur en forme de main pour indiquer que c'est cliquable */
   border-radius: 5px; /* Bords arrondis du bouton */
-  align-self: center; /* Centre le bouton horizontalement */
+  align-self: right; /* Centre le bouton horizontalement */
   transition: background-color 0.3s; /* Transition douce pour le changement de couleur */
 }
 
