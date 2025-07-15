@@ -372,10 +372,16 @@ section {
 /* ✅ SECTION CONTACT */
 #contact {
   background-color: #023640; /* Couleur de fond de la section Contact */  
-  color: white; /* Couleur du texte de la section Contact */
-  padding: 60px 20px; /* Espace intérieur en haut et en bas */
-  text-align: center; /* Centre le texte de la section Contact */
+  color: #F4F6F5; /* Couleur du texte de la section Contact */
+  padding: 5rem; /* Espace intérieur en haut et en bas */
+  width: 100%; /* Largeur de la section Contact */
+  height: 65rem; /* Hauteur de la section Contact */
+  text-align: center; /* Centre le texte de la section Contact */ 
+  font-family: var(--font-main); /* Police de la section Contact */
+  display: flex; /* Utilise Flexbox pour l'alignement */
+  flex-direction: column; /* Affiche les éléments en colonne */
 }
+
 
 #contact h2 { 
   font-size: 3rem; /* Taille de la police du titre de la section Contact */
@@ -391,87 +397,161 @@ section {
 }
 
 .contact-form {
-  max-width: 900px; /* Largeur maximale du formulaire de contact */
-  margin: 0 auto; /* Centre le formulaire de contact horizontalement */
-  display: flex; /* Utilise Flexbox pour l'alignement du formulaire */
-  flex-direction: column; /* Affiche les éléments du formulaire en colonne */
-  gap: 5rem; /* Espace entre les éléments du formulaire */
+  display: flex;
+  text-align: start; /* Aligne le texte à gauche */
+  flex-direction: column;
+  gap: 4rem; /* Évite les gros espaces entre champs */
+  width: 50rem; /* Largeur du formulaire */
+  max-width: 800px; /* Largeur maximale du formulaire */
+  margin: 0 auto; /* Centre le formulaire horizontalement */
+  color: #F4F6F5; /* Couleur du texte du formulaire */
 }
 
 .form-row {
-  display: flex; /* Utilise Flexbox pour l'alignement des lignes du formulaire */
-  gap: 5rem; /* Espace entre les champs du formulaire */
-  flex-wrap: wrap; /* Permet aux champs de passer à la ligne si nécessaire */
+  display: flex;
+  gap: 3rem;
+}
+
+.form-row input {
+  flex: 1;
 }
 
 .contact-form input,
 .contact-form textarea {
-  flex: 1; /* Permet aux champs de s'étendre également */
-  padding: 5%; /* Espace intérieur des champs */
-  border: none; /* Supprime la bordure par défaut */
-  border-bottom: 2px solid white; /* Bordure inférieure blanche */
-  background: transparent; /* Fond transparent pour les champs */
-  color: white; /* Couleur du texte des champs */
-  font-size: 1rem; /* Taille de la police des champs */
-  text-align: justify; /* Justifie le texte dans les champs */
+  background: transparent;
+  text-align: start; /* Aligne le texte à gauche */
+  border: none;
+  border-bottom: 4px solid white;
+  border-radius: 0.2rem;
+  padding: 1.5rem;
+  color: #F4F6F5; /* Couleur du texte des champs */
+  font-size: 1rem;
+  font-family: var(--font-main); /* Police des champs */
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #F4F6F5; /* Couleur des placeholders des champs */
+  color: #F4F6F5; /* Couleur des placeholders */
+  opacity: 2; /* Opacité des placeholders */
 }
 
+.contact-form textarea {
+  resize: vertical;
+  height: 150px; /* Hauteur par défaut du textarea */
+}
+
+/* Wrapper pour aligner le bouton */
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  font-family: var(--font-main); /* Police du bouton */
+}
+
+/* Bouton stylisé */
 .contact-form button {
-  background-color: #C8FF00; /* Couleur de fond du bouton */
-  color: black; /* Couleur du texte du bouton */
-  border: none; /* Supprime la bordure par défaut */
-  padding: 5%; /* Espace intérieur du bouton */
-  font-size: 2rem; /* Taille de la police du bouton */
-  cursor: pointer; /* Curseur en forme de main pour indiquer que c'est cliquable */
-  border-radius: 5%; /* Bords arrondis du bouton */
-  align-self: end; /* Centre le bouton horizontalement */
-  transition: background-color 0.3s; /* Transition douce pour le changement de couleur */
+  background-color: #b5e600;
+  color: black;
+  justify-content: end;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form button:hover {
-  background-color: #b5e600; /* Couleur de fond du bouton au survol */
+  background-color: #a4cf00;
 }
 
-/* ✅ SECTIONS À PROPOS */
+/* ✅ SECTION A PROPOS */
 .section-a-propos {
-  background-color: #f2f2f2; /* Couleur de fond de la section À propos */
-  padding: 60px 20px; /* Espace intérieur en haut et en bas */
-  text-align: center; /* Centre le texte de la section À propos */
-
+  padding: 60px 20px;
+  gap: 5rem /* Espace entre les éléments */;
+  display: flex;
+  justify-content: center;
 }
 
-/* Section Galerie */
-.section-galerie {
-  background-color: #f2f2f2; /* Couleur de fond de la section Galerie */
-  padding: 60px 20px; /* Espace intérieur en haut et en bas */
-  text-align: center; /* Centre le texte de la section Galerie */
+.contenu-a-propos {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Pour être responsive */
 }
 
-/* ✅ SLIDER ARTICLE / IMAGES HORIZONTALES */
-.slider { 
-  display: flex; /* Utilise Flexbox pour l'alignement */
-  gap: 10px; /* Espace entre les images */
-  overflow-x: auto; /* Permet le défilement horizontal */
-  scroll-behavior: smooth; /* Défilement fluide */
-  padding: 10px 0; /* Espace intérieur en haut et en bas */
+.a-propos-image img {
+  width: 100%;
+  max-width: 45rem; /* Largeur maximale de l'image */
+  height: auto; /* Hauteur automatique pour garder les proportions */
+  border-radius: 20px;
+  color: black;
 }
 
-.slider img {
-  width: 300px; /* Largeur de chaque image */
-  height: auto; /* Hauteur automatique pour conserver les proportions */
-  object-fit: cover; /* Couvre l'image sans déformer */
-  border-radius: 10px; /* Bords arrondis des images */
-  flex-shrink: 0; /* Empêche les images de rétrécir */
+.a-propos-texte {
+  flex: 1;
+  max-width: 45rem; /* Largeur maximale du texte */
+  color: #868686;
+  font-size: 2rem; /* Taille de la police du texte */
+  font-weight: 0.5rem; /* Poids de la police du texte */
+  padding: 5rem;
+  border-radius: 10px;
+  border: 1px solid black; /* Bordure noire autour du texte */
+  text-align: center;
 }
 
-.slider::-webkit-scrollbar {
-  display: none; /* Masque la barre de défilement pour un look plus propre */
+.a-propos-texte h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: black; /* Couleur du titre */
 }
+
+.a-propos-texte p {
+  font-size: large;
+  font-weight: 300;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Icônes alignées */
+.a-propos-icones {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.icone {
+  text-align: center;
+  max-width: 150px;
+}
+
+.cercle-noir {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #004d4d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.cercle-noir img {
+  max-width: 50%;
+}
+
+.icone p {
+  font-weight: bold;
+  color: #004d4d;
+  margin: 0;
+}
+
 
 
 /* ✅ FOOTER */
@@ -482,10 +562,9 @@ footer {
   padding: 1rem 0; /* Espace intérieur du footer */
   font-size: 0.9rem; /* Taille de la police du footer */
   /* Section Connexion */
-.section-connexion {
+}
+  .section-connexion {
   background-color: #f2f2f2; /* Couleur de fond de la section Connexion */
   padding: 60px 20px; /* Espace intérieur en haut et en bas */
   text-align: right; /* Centre le texte de la section Connexion */
-}
-
 }
