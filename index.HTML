@@ -201,30 +201,105 @@
 </section>
 
 
-<!-- Section Galerie -->
-    <section id="galerie"> <!-- Section pour la galerie -->
+<section id="galerie">
       <h2>Notre Galerie</h2> <!-- Titre de la section Galerie -->
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. donec sed leo in nisi vehicula bibendum.Aliquam sit amet blandit nisi, sodales molestie.</p> <!-- Description de la galerie -->
       <div class="slider"> <!-- Conteneur pour le slider -->
-        <img src="assets/kevin-bhagat-zNRITe8NPqY-unsplash1.jpg" alt="Projet 1" /> <!-- Image du projet 1 -->
+  <div class="carousel">
+    <div class="carousel-track-container">
+      <ul class="carousel-track">
+        <li class="carousel-slide"><img src="assets/kevin-bhagat-zNRITe8NPqY-unsplash1.jpg" alt="Image 1"></li>
+        <li class="carousel-slide"><img src="assets/d6a3c6ec168f4593d934c28d908b.jpg" alt="Image 2"></li>
+        <li class="carousel-slide"><img src="assets/amenagement-bureaux-ecologique-2-1024x640.jpg" alt="Image 3"></li>
+      </ul>
+    </div>
+
+    <!-- Boutons sous images -->
+  <div class="carousel-buttons-container">
+      <button class="carousel-button prev">&#10094;</button>
+      <button class="carousel-button next">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.carousel-button.next');
+  const prevButton = document.querySelector('.carousel-button.prev');
+  let currentSlide = 0;
+
+  function updateCarousel() {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+  }
+
+  nextButton.addEventListener('click', () => {
+    if (currentSlide < slides.length - 1) {
+      currentSlide++;
+      updateCarousel();
+    }
+  });
+
+  prevButton.addEventListener('click', () => {
+    if (currentSlide > 0) {
+      currentSlide--;
+      updateCarousel();
+    }
+  });
+
+  window.addEventListener('resize', updateCarousel);
+</script>
+
+</body>
+</html>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Content</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
       </div>
-    </section>
+      <div class="footer-col">
+        <h4>Informations</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+      <div class="footer-col">
+        <h4>Aide</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <div class="contact-item">
+    <i class="fas fa-phone"></i> <!-- Téléphone -->
+        <p>+33 00 00 00 00 00<br>+33 00 00 00 00 00</p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i> <!-- Localisation -->
+        <p>75001 Paris<br>France</p>
+      </div>
+    </div>
+  </div>
 
-
-
-  
-  <a href="connexion.html"> <!-- Lien vers la page de connexion -->
-    <button class="connexion-button"> <!-- Bouton de connexion -->
-      <i class="fas fa-user"></i> <!-- Icône utilisateur -->
-      Me connecter
-    </button> <!-- Texte du bouton -->     
-  <button>Me connecter</button> <!-- Bouton de connexion -->
-</a>
-
-
-  <footer> <!-- Pied de page -->
-    <p>&copy; 2025 AgencEco - Tous droits réservés.</p>    
-  </footer>
+  <div class="footer-bottom">
+    <p>Copyright © 2021 AGENCECO – All rights reserved</p>
+    <button class="connect-btn">Me connecter</button>
+<footer>
+  <div class="footer-socials">
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
 
 
   <!-- Script JavaScript -->

@@ -552,18 +552,227 @@ section {
   margin: 0;
 }
 
-
-
-/* ✅ FOOTER */
-footer {
-  background-color: var(--color-green-dark); /* Couleur de fond du footer */
-  color: white; /* Couleur du texte du footer */
-  text-align: center; /* Centre le texte du footer */
-  padding: 1rem 0; /* Espace intérieur du footer */
-  font-size: 0.9rem; /* Taille de la police du footer */
-  /* Section Connexion */
+/* ✅ SECTION GALERIE */
+#galerie {
+  color: #023640; /* Couleur du texte */
+  padding: 5rem 2rem; /* Espacement intérieur */
+  text-align: center; /* Centre le titre et le texte */
+  font-family: var(--font-main); /* Police cohérente */
 }
-  .section-connexion {
+
+#galerie h2 {
+  font-size: 3rem; /* Taille du titre */
+  margin-bottom: 1rem; /* Espace en dessous */
+  color: #469B61; /* Couleur accentuée comme les autres titres */
+  font-weight: bold;
+}
+
+#galerie p {
+  font-size: 2rem;
+  max-width: none; /* Largeur maximale du paragraphe */
+  margin: 0 auto 4rem auto; /* Centré + espace dessous */
+  color: black; /* Couleur du texte */
+}
+
+
+/* ✅ CAROUSEL */
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  overflow: visible; /* Permet de voir les images qui débordent */
+  text-align: center; /* Centre le texte du carousel */
+  border-radius: 50%; /* Bords arrondis du carousel */
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 1200px; /* Largeur maximale du carousel */
+  margin: 0 auto; /* Centre le carousel horizontalement */
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Centre le contenu de chaque slide */
+  align-items: center; /* Centre verticalement le contenu de chaque slide */
+}
+
+.carousel-slide img {
+  width: 100%; /* Largeur de l'image */
+  margin-left: auto; /* Centre l'image horizontalement */
+  margin-right: auto; /* Centre l'image horizontalement */
+  max-width: 90vw; /* Largeur maximale de l'image */
+  display: block;
+  border-radius: 5%; /* Bords arrondis des images du carousel */
+}
+
+/* Conteneur des boutons en dessous */
+.carousel-buttons-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Boutons */
+.carousel-button {
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+  width: 3rem; /* Largeur des boutons */
+  height: 3rem; /* Hauteur des boutons */
+  background-color: white;
+  border: 1px solid black; /* Bordure noire autour des boutons */
+  border-radius: 50%;
+  color: black; /* Couleur du texte des boutons */
+  font-size: 2rem; /* Taille de la police des boutons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.carousel-button:hover {
+  background-color: black; /* Couleur de fond au survol */
+  color: #C8FF00; /* Couleur du texte au survol */
+}
+
+.carousel-button.prev {
+  left: -10px;
+  font-size: revert-layer; /* Taille de la police du bouton précédent */
+}
+
+.carousel-button.next {
+  right: -10px;
+  font-size: revert-layer; /* Taille de la police du bouton suivant */
+}
+/* ✅ FOOTER */
+/* Section principale */
+.footer {
+  background-color: #143238;
+  color: white; /* Couleur du texte du footer */
+  font-family: sans-serif;
+}
+
+.footer-top { /* Partie supérieure du footer */
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+/* Colonnes de liens */
+.footer-columns {
+  display: flex;
+  gap: 20rem; /* Espace entre les colonnes */
+}
+
+.footer-col h4 { /* Titre des colonnes */
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.5rem; /* Taille de la police des titres */
+}
+/* Liens des colonnes */
+.footer-col p {
+  margin: -13px 0;
+  font-size: 1.3rem; /* Taille de la police des liens */
+}
+
+/* Bloc contact à droite */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+/* Icônes de contact */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+/* Icônes de contact */
+.contact-item img { 
+  width: 24px;
+  height: 24px;
+  filter: invert(74%) sepia(100%) saturate(999%) hue-rotate(40deg) brightness(120%);
+}
+
+/* Bas du footer */
+.footer-bottom {
+  background-color: #0b1f21;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  flex-wrap: wrap;
+}
+/* Liens du bas du footer */
+.connect-btn {
+  background-color: #c3ff00;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+/* Bouton de connexion */
+.connect-btn:hover {
+  background-color: #b0f000;
+}
+/* Icônes de réseaux sociaux */
+i {
+  font-size: 2rem; /* Taille des icônes */
+  color: #c8ff00; /* Couleur fluo comme sur ta maquette */
+  margin-right: 10px;
+}
+
+/* Réseaux sociaux */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+/* Icônes des réseaux sociaux */
+.footer-socials a i {
+  font-size: 24px;
+  color: white;
+  gap: 2rem; /* Espace entre les icônes */
+  transition: transform 0.2s;
+}
+/* Icônes des réseaux sociaux au survol */
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+/* Icônes des réseaux sociaux au survol */
+.social-icons a:hover img {
+  transform: scale(1.1);
+}
+
+/* ✅ SECTION CONNEXION */
+ .section-connexion {
   background-color: #f2f2f2; /* Couleur de fond de la section Connexion */
   padding: 60px 20px; /* Espace intérieur en haut et en bas */
   text-align: right; /* Centre le texte de la section Connexion */
