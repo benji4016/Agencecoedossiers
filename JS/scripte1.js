@@ -34,7 +34,7 @@ if (slider) {
 }
 
 // Chargement dynamique des articles
-fetch('./articles.json')
+fetch('http://localhost:3000/articles')
   .then(res => {
     if (!res.ok) throw new Error("Fichier JSON introuvable.");
     return res.json();

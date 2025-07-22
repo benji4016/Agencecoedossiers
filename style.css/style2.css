@@ -423,7 +423,7 @@ section {
   border: none;
   border-bottom: 4px solid white;
   border-radius: 0.2rem;
-  padding: 1.5rem;
+  padding-bottom: 0.5rem;
   color: #F4F6F5; /* Couleur du texte des champs */
   font-size: 1rem;
   font-family: var(--font-main); /* Police des champs */
@@ -578,23 +578,21 @@ section {
 /* ✅ CAROUSEL */
 .carousel {
   position: relative;
-  width: 90%;
-  max-width: 1000px;
-  margin: 50px auto;
+  width: 100%;
+  margin: 0 auto;
   overflow: visible; /* Permet de voir les images qui débordent */
   text-align: center; /* Centre le texte du carousel */
-  border-radius: 50%; /* Bords arrondis du carousel */
 }
 
 .carousel-container {
   width: 100%;
-  max-width: 1200px; /* Largeur maximale du carousel */
   margin: 0 auto; /* Centre le carousel horizontalement */
 }
 
 .carousel-track-container {
   overflow: hidden;
   position: relative;
+  border-radius: 30px; /* Bords arrondis du conteneur du carousel */
 }
 
 .carousel-track {
@@ -603,20 +601,18 @@ section {
 }
 
 .carousel-slide {
-  min-width: 100%;;
+  width: 100%; /* Largeur de chaque slide */
+  margin: 0 auto; /* Centre chaque slide horizontalement */
   box-sizing: border-box;
   display: flex;
+  border-radius: 5%; /* Bords arrondis des slides */
   justify-content: center; /* Centre le contenu de chaque slide */
   align-items: center; /* Centre verticalement le contenu de chaque slide */
 }
 
 .carousel-slide img {
   width: 100%; /* Largeur de l'image */
-  margin-left: auto; /* Centre l'image horizontalement */
-  margin-right: auto; /* Centre l'image horizontalement */
-  max-width: 90vw; /* Largeur maximale de l'image */
-  display: block;
-  border-radius: 5%; /* Bords arrondis des images du carousel */
+  height: 100%; /* Hauteur de l'image */
 }
 
 /* Conteneur des boutons en dessous */
@@ -630,7 +626,7 @@ section {
 /* Boutons */
 .carousel-button {
   position: absolute;
-  top: 100%;
+  top: 104%;
   transform: translateY(-50%);
   width: 3rem; /* Largeur des boutons */
   height: 3rem; /* Hauteur des boutons */
@@ -653,13 +649,15 @@ section {
 }
 
 .carousel-button.prev {
-  left: -10px;
-  font-size: revert-layer; /* Taille de la police du bouton précédent */
+  left: 5px;
+  font-size: 25px; /* Taille de la police du bouton précédent */
+  font-weight: 400; /* Met le texte en gras */
 }
 
 .carousel-button.next {
-  right: -10px;
-  font-size: revert-layer; /* Taille de la police du bouton suivant */
+  right: 5px;
+  font-size: 25px; /* Taille de la police du bouton suivant */
+  font-weight: 400; /* Met le texte en gras */
 }
 /* ✅ FOOTER */
 /* Section principale */

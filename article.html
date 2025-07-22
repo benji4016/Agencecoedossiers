@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Article</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; }
+    h1 { font-size: 2em; }
+    small { color: gray; }
+    #article-container { margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <a href="index.html">← Retour à la liste</a>
+  <div id="article-container">Chargement de l’article...</div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    if (!id) {
+      document.getElementById('article-container').innerHTML = "<p>ID d’article manquant dans l’URL.</p>";
+    } else {
+      fetch(`http://localhost:3000/articles`)
+        .then(res => res.json())
+        .then(data => {
+          const article = data.find(a => a.id == id);
+
+          if (!article) {
+            document.getElementById('article-container').innerHTML = "<p>Article introuvable.</p>";
+            return;
+          }
+
+          document.getElementById('article-container').innerHTML = `
+            <h1>${article.title}</h1>
+            <small>Publié le ${article.publicationDate}</small>
+            <p>${article.content}</p>
+          `;
+        })
+        .catch(err => {
+          console.error(err);
+          document.getElementById('article-container').innerHTML = "<p>Erreur lors du chargement de l’article.</p>";
+        });
+    }
+  </script>
+</body>
+</html>
