@@ -1,0 +1,44 @@
+<!-- ajout-actualite.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajouter une Actualité</title>
+  <style>
+    body { font-family: sans-serif; background: #eee; padding: 2rem; }
+    form { max-width: 600px; margin: auto; background: white; padding: 2rem; border-radius: 8px; }
+    input, textarea { width: 100%; margin-bottom: 1rem; padding: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Ajouter une Actualité</h1>
+  <form id="formAjout">
+    <input type="text" name="title" placeholder="Titre" required />
+    <input type="text" name="description" placeholder="Description" required />
+    <textarea name="content" placeholder="Contenu..." rows="6" required></textarea>
+    <button type="submit">Créer</button>
+  </form>
+
+  <script>
+    document.getElementById('formAjout').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+
+      const article = {
+        title: form.title.value,
+        description: form.description.value,
+        content: form.content.value
+      };
+
+      await fetch('http://localhost:3000/articles', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(article)
+      });
+
+      alert("Article ajouté !");
+      window.location.href = 'actualites.html';
+    });
+  </script>
+</body>
+</html>

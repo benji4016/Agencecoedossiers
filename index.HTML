@@ -23,20 +23,26 @@
       <div class="logo"> <!-- Logo de l'agence -->
       <a href="#accueil">Agenceco</a> <!-- Nom de l'agence avec lien vers la section Accueil -->
       </div>
-         <ul class="menu"> <!-- Menu de navigation -->
+      <ul class="menu"> <!-- Menu de navigation -->
          <li><a href="#accueil">Accueil</a></li> <!-- Lien vers la section Accueil -->  
          <li><a href="#equipe">Notre équipe</a></li> <!-- Lien vers la section Équipe -->
          <li><a href="nos-services.html">Services</a></li> <!-- Lien vers la page des Services -->
          <li><a href="#temoignages">Témoignages</a></li> <!-- Lien vers la section Témoignages -->
          <li><a href="contact.html">Contactez-nous</a></li> <!-- Lien vers la page de Contact -->
-         <li><a href="#articles">Actualités</a></li>  <!-- Lien vers la section Actualités -->
-         <ul> 
+         <li><a href="actualités.html">Actualités</a></li>  <!-- Lien vers la section Actualités -->
+        
+           <!-- 🔽 Liens vers les pages secondaires -->
+         <li><a href="connexion.html">Connexion</a></li>
+         <li><a href="actualités.html">Voir les actualités</a></li>
+         <li><a href="ajout-actualités.html">Ajouter une actualité</a></li>
+         <li><a href="modif-actu.html">Modifier une actualité</a></li>
+      </ul>
+
       </div>
       <div class="burger" aria-label="Ouvrir le menu" role="button" tabindex="0"> <!-- Menu burger pour les écrans plus petits -->
         <i class="fas fa-bars" aria-hidden="true"></i> <!-- Icône du menu burger -->
       </div>
     </nav>
-    </ul>
   </header>
 
 
@@ -111,42 +117,9 @@
   </div>
   </section><!-- Fin de la section Services -->
 
-
-<!-- Section Actualités -->
-    <section id="articles"> <!-- Section pour les actualités -->
-      <h2>Dernières actualités</h2> <!-- Titre de la section Actualités -->
-      <div id="articles-container"> <!-- Conteneur pour les articles -->
-        <div class="article">   <!-- Bloc pour un article -->
-          <h3>AgencEco remporte le prix de l’innovation verte</h3> <!-- Titre de l'article -->
-          <p>
-            Notre agence a été récompensée pour son engagement en faveur de l’environnement lors du dernier salon des entreprises écoresponsables. Un grand merci à tous nos partenaires !
-          </p>
-          <span class="date">Publié le 25 mai 2025</span> <!-- Date de publication -->
-      <h3>Une refonte écologique pour le site d’une entreprise locale</h3>
-      <p> <!-- Titre de l'article -->
-        Nous avons accompagné une PME de la région dans la création d’un site éco-conçu, réduisant son empreinte carbone de 30%. Une belle réussite pour un web plus responsable !
-      </p> <!-- Description de l'article -->
-      <span class="date">Publié le 18 mai 2025</span> <!-- Date de publication -->
-    </div>
-
-    <div class="article"> <!-- Bloc pour un autre article -->
-      <h3>AgencEco s’engage pour l’hébergement vert</h3> <!-- Titre de l'article -->
-      <p> <!-- Description de l'article -->
-        Tous nos nouveaux projets sont désormais hébergés sur des serveurs alimentés par des énergies renouvelables. Une avancée concrète pour l’environnement !
-      </p> <!-- Description de l'article -->
-      <span class="date">Publié le 12 mai 2025</span> <!-- Date de publication -->
-    </div>
-
-    <div class="article"> <!-- Bloc pour un autre article -->
-      <h3>Nos conseils pour un site à faible impact écologique</h3> <!-- Titre de l'article -->
-      <p> <!-- Description de l'article -->
-        Découvrez nos bonnes pratiques pour optimiser votre site web : compression d’images, sobriété du design, hébergement vert... chaque geste compte !
-      </p>  <!-- Description de l'article -->
-      <span class="date">Publié le 5 mai 2025</span> <!-- Date de publication -->
-    </div>
-  </div>
-</section>
-
+  <div class="articles-section"> <!-- Section pour les articles -->
+  <div id="articles-container">Dernières actualités</div>
+</div>
 
 <section id="contact"> <!-- Section de contact -->
   <h2>Contactez-nous</h2> <!-- Titre de la section Contact -->
@@ -223,37 +196,6 @@
   </div>
 </section>
 
-<script>
-  const track = document.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
-  const nextButton = document.querySelector('.carousel-button.next');
-  const prevButton = document.querySelector('.carousel-button.prev');
-  let currentSlide = 0;
-
-  function updateCarousel() {
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-  }
-
-  nextButton.addEventListener('click', () => {
-    if (currentSlide < slides.length - 1) {
-      currentSlide++;
-      updateCarousel();
-    }
-  });
-
-  prevButton.addEventListener('click', () => {
-    if (currentSlide > 0) {
-      currentSlide--;
-      updateCarousel();
-    }
-  });
-
-  window.addEventListener('resize', updateCarousel);
-</script>
-
-</body>
-</html>
 
 <footer class="footer">
   <div class="footer-top">
@@ -305,5 +247,33 @@
 
   <!-- Script JavaScript -->
   <script src="JS/scripte1.js" defer></script> <!-- Lien vers le fichier JavaScript pour les fonctionnalités de la page -->
+  <script>
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.carousel-button.next');
+  const prevButton = document.querySelector('.carousel-button.prev');
+  let currentSlide = 0;
+
+  function updateCarousel() {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+  }
+
+  nextButton.addEventListener('click', () => {
+    if (currentSlide < slides.length - 1) {
+      currentSlide++;
+      updateCarousel();
+    }
+  });
+
+  prevButton.addEventListener('click', () => {
+    if (currentSlide > 0) {
+      currentSlide--;
+      updateCarousel();
+    }
+  });
+
+  window.addEventListener('resize', updateCarousel);
+</script>
 </body>
 </html>

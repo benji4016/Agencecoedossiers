@@ -1,0 +1,53 @@
+<!-- modifier-actualite.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Modifier une Actualité</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #eee; }
+    form { max-width: 600px; margin: auto; background: white; padding: 2rem; border-radius: 8px; }
+    input, textarea { width: 100%; margin-bottom: 1rem; padding: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Modifier une Actualité</h1>
+  <form id="formModif">
+    <input type="text" name="title" placeholder="Titre" required />
+    <input type="text" name="description" placeholder="Description" required />
+    <textarea name="content" placeholder="Contenu..." rows="6" required></textarea>
+    <button type="submit">Modifier</button>
+  </form>
+
+  <script>
+    const id = new URLSearchParams(window.location.search).get('id');
+    const form = document.getElementById('formModif');
+
+    fetch(`http://localhost:3000/articles/${id}`)
+      .then(res => res.json())
+      .then(data => {
+        form.title.value = data.title;
+        form.description.value = data.description;
+        form.content.value = data.content;
+      });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const updatedArticle = {
+        title: form.title.value,
+        description: form.description.value,
+        content: form.content.value
+      };
+
+      await fetch(`http://localhost:3000/articles/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedArticle)
+      });
+
+      alert("Article modifié !");
+      window.location.href = 'actualites.html';
+    });
+  </script>
+</body>
+</html>

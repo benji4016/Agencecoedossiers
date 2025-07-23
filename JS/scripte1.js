@@ -57,8 +57,8 @@ fetch('http://localhost:3000/articles')
       const articleDiv = document.createElement('div');
       articleDiv.classList.add('article-card');
       articleDiv.innerHTML = `
-        <h3>${article.titre ?? "Sans titre"}</h3>
-        <p>${article.contenu?.substring(0, 100) ?? "Contenu indisponible"}...</p>
+        <h3>${article.title ?? "Sans titre"}</h3>
+        <p>${article.content?.substring(0, 100) ?? "Contenu indisponible"}...</p>
         <a href="article.html?id=${article.id}">Lire plus</a>
       `;
       container.appendChild(articleDiv);
