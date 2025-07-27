@@ -1,23 +1,101 @@
-<!-- login.html -->
-<!DOCTYPE html>
-<html lang="fr">
-<head>
+<!DOCTYPE html> <!-- Déclaration du type de document HTML5 -->
+<html lang="fr">  <!-- Langue du document -->
+<head> <!-- Métadonnées du document -->
+  <meta charset="UTF-8" /> <!-- Encodage des caractères -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Vueport pour la réactivité sur mobile -->
+  <title>Agenceco - Accueil</title> <!-- Titre de la page -->
+  <meta name="description" content="Bienvenue dans votre agence écologique" /> <!-- Description de la page pour les moteurs de recherche -->
+
+  <!-- Google Fonts : Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" /> <!-- Importation de la police Poppins depuis Google Fonts -->
+
+  <!-- FontAwesome (CDN) corrigé -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  /> <!-- Importation de FontAwesome pour les icônes -->
+
+  <!-- Fichier CSS -->
+  <link rel="stylesheet" href="style.css/style2.css" /> <!-- Lien vers le fichier CSS pour le style de la page -->
+</head>
+<header>
+    <nav id="main-nav"> <!-- Navigation principale -->
+      <div class="logo"> <!-- Logo de l'agence -->
+      <a href="#accueil">Agenceco</a> <!-- Nom de l'agence avec lien vers la section Accueil -->
+      </div>
+      <ul class="menu"> <!-- Menu de navigation -->
+         <li><a href="#accueil">Accueil</a></li> <!-- Lien vers la section Accueil -->  
+         <li><a href="#equipe">Notre équipe</a></li> <!-- Lien vers la section Équipe -->
+         <li><a href="nos-services.html">Services</a></li> <!-- Lien vers la page des Services -->
+         <li><a href="#temoignages">Témoignages</a></li> <!-- Lien vers la section Témoignages -->
+         <li><a href="contact.html">Contactez-nous</a></li> <!-- Lien vers la page de Contact -->
+         <li><a href="actualités.html">Actualités</a></li>  <!-- Lien vers la section Actualités -->
+      </div>
+      <div class="burger" aria-label="Ouvrir le menu" role="button" tabindex="0"> <!-- Menu burger pour les écrans plus petits -->
+      </div>
+    </nav>
+    <link rel="stylesheet" href="style.css/style2.css">
   <meta charset="UTF-8">
   <title>Connexion</title>
-  <style>
-    body { font-family: sans-serif; background: #222; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; }
-    form { background: #333; padding: 2rem; border-radius: 8px; }
-    input { display: block; width: 100%; padding: 8px; margin-bottom: 1rem; }
-    button { background: #4CAF50; color: white; border: none; padding: 10px 15px; }
-  </style>
 </head>
 <body>
-  <form id="loginForm">
-    <h2>Connexion</h2>
-    <input type="email" placeholder="Email" name="email" required />
-    <input type="password" placeholder="Mot de passe" name="password" required />
-    <button type="submit">Se connecter</button>
+  <nav> <!-- Navigation pour la page de connexion -->
+    <form id="loginForm">
+      <h2>Connexion</h2>
+      <input type="email" placeholder="Email" name="email" required />
+      <input type="password" placeholder="Mot de passe" name="password" required />
+      <button type="submit">Se connecter</button>
+    </form>
+  </nav>
   </form>
+
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Content</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+      <div class="footer-col">
+        <h4>Informations</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+      <div class="footer-col">
+        <h4>Aide</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <div class="contact-item">
+    <i class="fas fa-phone"></i> <!-- Téléphone -->
+        <p>+33 00 00 00 00 00<br>+33 00 00 00 00 00</p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i> <!-- Localisation -->
+        <p>75001 Paris<br>France</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2021 AGENCECO – All rights reserved</p>
+    <button class="connect-btn">Me connecter</button>
+<footer>
+  <div class="footer-socials">
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
 
   <script>
     document.getElementById('loginForm').addEventListener('submit', async (e) => {

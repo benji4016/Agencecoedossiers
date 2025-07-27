@@ -32,15 +32,14 @@
          <li><a href="actualités.html">Actualités</a></li>  <!-- Lien vers la section Actualités -->
         
            <!-- 🔽 Liens vers les pages secondaires -->
-         <li><a href="connexion.html">Connexion</a></li>
-         <li><a href="actualités.html">Voir les actualités</a></li>
-         <li><a href="ajout-actualités.html">Ajouter une actualité</a></li>
-         <li><a href="modif-actu.html">Modifier une actualité</a></li>
+         <li><a href="connexion.html"></a></li>
+         <li><a href="actualités.html"></a></li>
+         <li><a href="ajout-actualités.html"></a></li>
+         <li><a href="modifier-actualités.html"></a></li>
       </ul>
 
       </div>
       <div class="burger" aria-label="Ouvrir le menu" role="button" tabindex="0"> <!-- Menu burger pour les écrans plus petits -->
-        <i class="fas fa-bars" aria-hidden="true"></i> <!-- Icône du menu burger -->
       </div>
     </nav>
   </header>
@@ -175,23 +174,29 @@
 </section>
 
 
-<section id="galerie">
-      <h2>Notre Galerie</h2> <!-- Titre de la section Galerie -->
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. donec sed leo in nisi vehicula bibendum.Aliquam sit amet blandit nisi, sodales molestie.</p> <!-- Description de la galerie -->
-      <div class="slider"> <!-- Conteneur pour le slider -->
-  <div class="carousel">
-    <div class="carousel-track-container">
-      <ul class="carousel-track">
-        <li class="carousel-slide"><img src="assets/kevin-bhagat-zNRITe8NPqY-unsplash1.jpg" alt="Image 1"></li>
-        <li class="carousel-slide"><img src="assets/d6a3c6ec168f4593d934c28d908b.jpg" alt="Image 2"></li>
-        <li class="carousel-slide"><img src="assets/amenagement-bureaux-ecologique-2-1024x640.jpg" alt="Image 3"></li>
-      </ul>
-    </div>
+<section id="galerie" class="gallery-section">
+  <h2>Notre Galerie</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed leo in nisi vehicula bibendum. Aliquam sit amet blandit nisi, sodales molestie.</p>
 
-    <!-- Boutons sous images -->
-  <div class="carousel-buttons-container">
-      <button class="carousel-button prev">&#10094;</button>
-      <button class="carousel-button next">&#10095;</button>
+  <div class="slider">
+    <div class="carousel">
+      <div class="carousel-track-container">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide"> 
+            <img src="assets/kevin-bhagat-zNRITe8NPqY-unsplash1.jpg" alt="Image 1">
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/jason-goodman-Oalh2MojUuk-unsplash-1.jpg" alt="Image 2">
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/rodion-kutsaev-049M_crau5k-unsplash-1.jpg" alt="Image 3">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-buttons-container">
+        <button class="carousel-button prev" id="prevBtn">&#10094;</button>
+        <button class="carousel-button next" id="nextBtn">&#10095;</button>
+      </div>
     </div>
   </div>
 </section>
@@ -235,7 +240,7 @@
 
   <div class="footer-bottom">
     <p>Copyright © 2021 AGENCECO – All rights reserved</p>
-    <button class="connect-btn">Me connecter</button>
+    <a href="connexion.html" class="connect-btn">Me connecter</a>
 <footer>
   <div class="footer-socials">
     <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>

@@ -1,28 +1,44 @@
-<script>
-  const track = document.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
-  const nextButton = document.querySelector('.next');
-  const prevButton = document.querySelector('.prev');
-  let currentSlide = 0;
+const track = document.getElementById('carouselTrack');
+const images = track.querySelectorAll('.carousel-slide');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 
-  function updateCarousel() {
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-  }
+let index = 0;
+const intervalTime = 4000;
+let autoSlideInterval;
 
-  nextButton.addEventListener('click', () => {
-    if (currentSlide < slides.length - 1) {
-      currentSlide++;
-      updateCarousel();
-    }
-  });
+// Fonction pour déplacer le carrousel
+function updateCarousel() {
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
 
-  prevButton.addEventListener('click', () => {
-    if (currentSlide > 0) {
-      currentSlide--;
-      updateCarousel();
-    }
-  });
+// Fonction pour démarrer l'auto-slide
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    index = (index + 1) % images.length;
+    updateCarousel();
+  }, intervalTime);
+}
 
-  window.addEventListener('resize', updateCarousel); // Pour le responsive
-</script>
+// Fonction pour redémarrer le timer auto (quand clic manuel)
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  startAutoSlide();
+}
+
+// Clic bouton suivant
+nextBtn.addEventListener('click', () => {
+  index = (index + 1) % images.length;
+  updateCarousel();
+  resetAutoSlide();
+});
+
+// Clic bouton précédent
+prevBtn.addEventListener('click', () => {
+  index = (index - 1 + images.length) % images.length;
+  updateCarousel();
+  resetAutoSlide();
+});
+
+// Lancer le défilement automatique au chargement
+startAutoSlide();

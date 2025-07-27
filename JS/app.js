@@ -297,4 +297,4 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification));
 app.listen(3000, () => {
     console.log('✅ Serveur lancé sur http://localhost:3000');
     console.log('📚 Swagger dispo sur http://localhost:3000/api-docs');
-});  mon app.js 
+}); 

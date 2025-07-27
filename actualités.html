@@ -2,13 +2,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <link rel="stylesheet" href="style.css/style2.css">
   <meta charset="UTF-8">
   <title>Actualités</title>
-  <style>
-    body { font-family: sans-serif; background: #f4f4f4; padding: 2rem; }
-    .article { background: white; margin-bottom: 1rem; padding: 1rem; border: 1px solid #ccc; }
-    button { margin-right: 10px; }
-  </style>
 </head>
 <body>
   <h1>Liste des Actualités</h1>
@@ -35,7 +31,6 @@
         container.appendChild(div);
       });
     }
-
     async function supprimer(id) {
       if (confirm("Supprimer cet article ?")) {
         await fetch(`http://localhost:3000/articles/${id}`, { method: 'DELETE' });
@@ -45,5 +40,51 @@
 
     fetchArticles();
   </script>
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Content</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+      <div class="footer-col">
+        <h4>Informations</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+      <div class="footer-col">
+        <h4>Aide</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <div class="contact-item">
+    <i class="fas fa-phone"></i> <!-- Téléphone -->
+        <p>+33 00 00 00 00 00<br>+33 00 00 00 00 00</p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i> <!-- Localisation -->
+        <p>75001 Paris<br>France</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2021 AGENCECO – All rights reserved</p>
+    <button class="connect-btn">Me connecter</button>
+<footer>
+  <div class="footer-socials">
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
 </body>
 </html>

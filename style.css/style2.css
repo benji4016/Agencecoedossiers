@@ -556,7 +556,7 @@ section {
 /* ✅ SECTION GALERIE */
 #galerie {
   color: #023640; /* Couleur du texte */
-  padding: 5rem 2rem; /* Espacement intérieur */
+  padding: 1rem 12rem; /* Espacement intérieur */
   text-align: center; /* Centre le titre et le texte */
   font-family: var(--font-main); /* Police cohérente */
 }
@@ -581,7 +581,7 @@ section {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  overflow: visible; /* Permet de voir les images qui débordent */
+  border-radius: 20px; /* Bords arrondis du carousel */
   text-align: center; /* Centre le texte du carousel */
 }
 
@@ -599,7 +599,9 @@ section {
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: 300%; /* Largeur totale du carousel */
 }
+
 
 .carousel-slide {
   width: 100%; /* Largeur de chaque slide */
@@ -627,7 +629,7 @@ section {
 /* Boutons */
 .carousel-button {
   position: absolute;
-  top: 104%;
+  top: 101%;
   transform: translateY(-50%);
   width: 3rem; /* Largeur des boutons */
   height: 3rem; /* Hauteur des boutons */
@@ -660,6 +662,8 @@ section {
   font-size: 25px; /* Taille de la police du bouton suivant */
   font-weight: 400; /* Met le texte en gras */
 }
+
+
 /* ✅ FOOTER */
 /* Section principale */
 .footer {
@@ -671,14 +675,14 @@ section {
 .footer-top { /* Partie supérieure du footer */
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 20px 191px;
   flex-wrap: wrap;
 }
 
 /* Colonnes de liens */
 .footer-columns {
   display: flex;
-  gap: 20rem; /* Espace entre les colonnes */
+  gap: 15rem; /* Espace entre les colonnes */
 }
 
 .footer-col h4 { /* Titre des colonnes */
@@ -688,7 +692,7 @@ section {
 }
 /* Liens des colonnes */
 .footer-col p {
-  margin: -13px 0;
+  margin: 0px 0;
   font-size: 1.3rem; /* Taille de la police des liens */
 }
 
@@ -718,7 +722,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: 20px 190px;
   flex-wrap: wrap;
 }
 /* Liens du bas du footer */
@@ -746,13 +750,16 @@ i {
 /* Réseaux sociaux */
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 14px; /* Espace entre les icônes */
 }
 /* Icônes des réseaux sociaux */
 .footer-socials a i {
   font-size: 24px;
   color: white;
-  gap: 2rem; /* Espace entre les icônes */
+  border: white 2px solid;
+  border-radius: 8px;
+  padding: 8px;
+  gap: 2.5rem; /* Espace entre les icônes */
   transition: transform 0.2s;
 }
 /* Icônes des réseaux sociaux au survol */
@@ -761,8 +768,6 @@ i {
   height: 24px;
   padding: 8px;
   background-color: transparent;
-  border: 2px solid white;
-  border-radius: 8px;
   transition: transform 0.2s;
 }
 /* Icônes des réseaux sociaux au survol */
