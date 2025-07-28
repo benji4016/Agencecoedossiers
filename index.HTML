@@ -118,6 +118,10 @@
 
   <div class="articles-section"> <!-- Section pour les articles -->
   <div id="articles-container">Dernières actualités</div>
+  <main>
+  <h1>Nos actualités</h1>
+  <div id="articles"></div>
+</main>
 </div>
 
 <section id="contact"> <!-- Section de contact -->
@@ -252,33 +256,7 @@
 
   <!-- Script JavaScript -->
   <script src="JS/scripte1.js" defer></script> <!-- Lien vers le fichier JavaScript pour les fonctionnalités de la page -->
-  <script>
-  const track = document.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
-  const nextButton = document.querySelector('.carousel-button.next');
-  const prevButton = document.querySelector('.carousel-button.prev');
-  let currentSlide = 0;
-
-  function updateCarousel() {
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-  }
-
-  nextButton.addEventListener('click', () => {
-    if (currentSlide < slides.length - 1) {
-      currentSlide++;
-      updateCarousel();
-    }
-  });
-
-  prevButton.addEventListener('click', () => {
-    if (currentSlide > 0) {
-      currentSlide--;
-      updateCarousel();
-    }
-  });
-
-  window.addEventListener('resize', updateCarousel);
+  <script src="JS/carrousel.js" defer></script>
 </script>
 </body>
 </html>

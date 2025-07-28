@@ -2,15 +2,41 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <link rel="stylesheet" href="style.css/style2.css">
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actualités - Agenceco</title>
+  <meta name="description" content="Liste des actualités de l'agence écologique" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css/style2.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header> 
+    <nav id="main-nav">
+      <div class="logo">
+        <a href="#accueil">Agenceco</a>
+      </div>
+      <ul class="menu">
+         <li><a href="#accueil">Accueil</a></li>
+         <li><a href="#equipe">Notre équipe</a></li>
+         <li><a href="nos-services.html">Services</a></li>
+         <li><a href="#temoignages">Témoignages</a></li>
+         <li><a href="contact.html">Contactez-nous</a></li>
+         <li><a href="actualités.html">Actualités</a></li>
+      </ul>
+      <div class="burger" aria-label="Ouvrir le menu" role="button" tabindex="0"></div>
+    </nav>
+  </header>
   <title>Actualités</title>
+
 </head>
 <body>
   <h1>Liste des Actualités</h1>
   <div id="articles"></div>
-  <a href="ajout-actualite.html"><button>➕ Ajouter une actualité</button></a>
+  <a href="ajout-actualités.html"><button> Ajouter une actualité</button></a>
+  <main>
 
+ 
   <script>
     async function fetchArticles() {
       const res = await fetch('http://localhost:3000/articles');
@@ -25,8 +51,8 @@
           <h3>${article.title}</h3>
           <p>${article.description}</p>
           <small>${article.publicationDate}</small><br><br>
-          <button onclick="window.location='modifier-actualite.html?id=${article.id}'">✏️ Modifier</button>
-          <button onclick="supprimer(${article.id})">🗑️ Supprimer</button>
+          <button onclick="window.location='modifier-actualite.html?id=${article.id}'"> Modifier</button>
+          <button onclick="supprimer(${article.id})"> Supprimer</button>
         `;
         container.appendChild(div);
       });

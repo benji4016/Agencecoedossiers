@@ -330,15 +330,74 @@ section {
   text-align: center; /* Centre le texte de la section Actus */
 }
 
+.card-article {
+  background-color: #3c9c6e;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  color: white;
+}
+
+.card-article h3 {
+  font-size: 20px;
+  background-color: #469B61; /* Couleur de fond du titre de l'article */
+  margin-bottom: 10px;
+}
+
+.card-article .date {
+  font-size: 14px;
+  color: #c8e6c9;
+}
+
+.boutons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-modifier {
+  background-color: orange;
+  border: none;
+  padding: 5px 12px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-supprimer {
+  background-color: red;
+  border: none;
+  padding: 5px 12px;
+  position: end;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-ajouter {
+  background-color: #FFAA00; /* Couleur de fond du bouton Ajouter */
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  margin: 20px;
+  cursor: pointer;
+}
+
 
 #actus h2 {
   color: #469B61; /* Couleur du titre de la section Actus */
+  background-color: #469B61 ; /* Couleur de fond du titre de la section Actus */
   font-size: 2.2em; /* Taille de la police du titre */
   margin-bottom: 30px; /* Espace en dessous du titre */
 }
 
 #actus-container {
   display: flex; /* Utilise Flexbox pour l'alignement des articles */
+  background-color: #469B61; /* Couleur de fond du conteneur des articles */
   flex-direction: column; /* Affiche les articles en colonne */
   gap: 15%; /* Espace entre les articles */   
   max-width: 100%; /* Largeur maximale du conteneur des articles */
@@ -356,18 +415,21 @@ section {
 
 .article h3 {
   color: #ffffff; /* Couleur du titre de l'article */
+  background-color: #469B61; /* Couleur de fond du titre de l'article */
   margin-bottom: 10px; /* Espace en dessous du titre */  
 }
 
 .article p {
   color: #ffffff; /* Couleur du texte de l'article */
   font-size: 1em; /* Taille de la police du texte de l'article */
+  background-color: #469B61; /* Couleur de fond du texte de l'article */
   margin-bottom: 10px; /* Espace en dessous du texte de l'article */
 }
 
 .article .date {
   font-size: 0.9em; /* Taille de la police de la date */
   color: #ffffff; /* Couleur du texte de la date */
+  background-color: #469B61; /* Couleur de fond de la date */
 }
 
 /* ✅ SECTION CONTACT */

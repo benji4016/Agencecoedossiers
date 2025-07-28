@@ -9,7 +9,8 @@ let autoSlideInterval;
 
 // Fonction pour déplacer le carrousel
 function updateCarousel() {
-  track.style.transform = `translateX(-${index * 100}%)`;
+  track.style.transform = `translateX(-${index * 33.33}%)`;
+  console.log(`index % 33.33: ${index * 33.33}%`);
 }
 
 // Fonction pour démarrer l'auto-slide

@@ -15,6 +15,7 @@ if (burger && menu) {
   });
 }
 
+
 // Slider automatique (optionnel)
 const slider = document.querySelector('.slider');
 
@@ -32,6 +33,7 @@ if (slider) {
     });
   }, 4000);
 }
+
 
 // Chargement dynamique des articles
 fetch('http://localhost:3000/articles')
