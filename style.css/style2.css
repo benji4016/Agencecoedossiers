@@ -725,7 +725,6 @@ section {
   font-weight: 400; /* Met le texte en gras */
 }
 
-
 /* ✅ FOOTER */
 /* Section principale */
 .footer {
@@ -737,7 +736,7 @@ section {
 .footer-top { /* Partie supérieure du footer */
   display: flex;
   justify-content: space-between;
-  padding: 20px 191px;
+  padding:2rem 12rem; /* Espace intérieur du footer */
   flex-wrap: wrap;
 }
 
@@ -842,4 +841,13 @@ i {
   background-color: #f2f2f2; /* Couleur de fond de la section Connexion */
   padding: 60px 20px; /* Espace intérieur en haut et en bas */
   text-align: right; /* Centre le texte de la section Connexion */
+}
+
+ #form-loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: #555 3rem solid;
+  gap: 1rem;
 }

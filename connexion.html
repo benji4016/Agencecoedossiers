@@ -1,104 +1,129 @@
-<!DOCTYPE html> <!-- Déclaration du type de document HTML5 -->
-<html lang="fr">  <!-- Langue du document -->
-<head> <!-- Métadonnées du document -->
-  <meta charset="UTF-8" /> <!-- Encodage des caractères -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Vueport pour la réactivité sur mobile -->
-  <title>Agenceco - Accueil</title> <!-- Titre de la page -->
-  <meta name="description" content="Bienvenue dans votre agence écologique" /> <!-- Description de la page pour les moteurs de recherche -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenceco - Connexion</title>
+  <meta name="description" content="Bienvenue dans votre agence écologique" />
 
-  <!-- Google Fonts : Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" /> <!-- Importation de la police Poppins depuis Google Fonts -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 
-  <!-- FontAwesome (CDN) corrigé -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  /> <!-- Importation de FontAwesome pour les icônes -->
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Fichier CSS -->
-  <link rel="stylesheet" href="style.css/style2.css" /> <!-- Lien vers le fichier CSS pour le style de la page -->
+  <!-- Ton CSS -->
+  <link rel="stylesheet" href="style.css/style2.css" />
+
+
+
+
+  <style>
+    /* Mini style pour bien afficher la connexion */
+    .connexion-container {
+      max-width: 50%;
+      margin: 0 auto;
+      padding: 20rem;
+    }
+
+    .connexion-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    .connexion-container button {
+      padding: 10px 20px;
+      background-color: #c8ff00;
+      color: black;
+      border-radius: 5rem;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
 </head>
+
 <body>
-  <header> <!-- En-tête de la page -->
-    <nav id="main-nav"> <!-- Navigation principale -->
-      <div class="logo"> <!-- Logo de l'agence -->
-      <a href="#accueil">Agenceco</a> <!-- Nom de l'agence avec lien vers la section Accueil -->
+
+  <!-- HEADER -->
+  <header>
+    <nav id="main-nav">
+      <div class="logo">
+        <a href="#accueil">Agenceco</a>
       </div>
-      <ul class="menu"> <!-- Menu de navigation -->
-         <li><a href="#accueil">Accueil</a></li> <!-- Lien vers la section Accueil -->  
-         <li><a href="#equipe">Notre équipe</a></li> <!-- Lien vers la section Équipe -->
-         <li><a href="nos-services.html">Services</a></li> <!-- Lien vers la page des Services -->
-         <li><a href="#temoignages">Témoignages</a></li> <!-- Lien vers la section Témoignages -->
-         <li><a href="contact.html">Contactez-nous</a></li> <!-- Lien vers la page de Contact -->
-         <li><a href="actualités.html">Actualités</a></li>  <!-- Lien vers la section Actualités -->
-      </div>
-      <div class="burger" aria-label="Ouvrir le menu" role="button" tabindex="0"> <!-- Menu burger pour les écrans plus petits -->
-      </div>
+      <ul class="menu">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#equipe">Notre équipe</a></li>
+        <li><a href="nos-services.html">Services</a></li>
+        <li><a href="#temoignages">Témoignages</a></li>
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="actualités.html">Actualités</a></li>
+      </ul>
+      <div class="burger" aria-label="Ouvrir le menu" role="button" tabindex="0"></div>
     </nav>
-    <link rel="stylesheet" href="style.css/style2.css">
-  <meta charset="UTF-8">
-  <title>Connexion</title>
-</head>
-<body>
-  <nav> <!-- Navigation pour la page de connexion -->
+  </header>
+
+   <!-- FORMULAIRE DE CONNEXION -->
+  <div class="connexion-container">
+    <h1>Connexion</h1>
+    <p>Pour voir les actualités, merci de vous connecter</p>
     <form id="loginForm">
-      <h2>Connexion</h2>
       <input type="email" placeholder="Email" name="email" required />
       <input type="password" placeholder="Mot de passe" name="password" required />
-      <button type="submit">Se connecter</button>
+      <button type="submit">Me connecter</button>
     </form>
-  </nav>
-  </form>
-  </body>
-
-
-<footer class="footer">
-  <div class="footer-top">
-    <div class="footer-columns">
-      <div class="footer-col">
-        <h4>Content</h4>
-        <p>consectetur</p>
-        <p>adipiscing</p>
-      </div>
-      <div class="footer-col">
-        <h4>Informations</h4>
-        <p>consectetur</p>
-        <p>adipiscing</p>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <p>consectetur</p>
-        <p>adipiscing</p>
-      </div>
-      <div class="footer-col">
-        <h4>Aide</h4>
-        <p>consectetur</p>
-        <p>adipiscing</p>
-      </div>
-    </div>
-    <div class="footer-contact">
-      <div class="contact-item">
-    <i class="fas fa-phone"></i> <!-- Téléphone -->
-        <p>+33 00 00 00 00 00<br>+33 00 00 00 00 00</p>
-      </div>
-      <div class="contact-item">
-        <i class="fas fa-map-marker-alt"></i> <!-- Localisation -->
-        <p>75001 Paris<br>France</p>
-      </div>
-    </div>
   </div>
 
-  <div class="footer-bottom">
-    <p>Copyright © 2021 AGENCECO – All rights reserved</p>
-    <button class="connect-btn">Me connecter</button>
-<footer>
-  <div class="footer-socials">
-    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-  </div>
-</footer>
+  
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>Content</h4>
+          <p>consectetur</p>
+          <p>adipiscing</p>
+        </div>
+        <div class="footer-col">
+          <h4>Informations</h4>
+          <p>consectetur</p>
+          <p>adipiscing</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <p>consectetur</p>
+          <p>adipiscing</p>
+        </div>
+        <div class="footer-col">
+          <h4>Aide</h4>
+          <p>consectetur</p>
+          <p>adipiscing</p>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <p>+33 00 00 00 00 00<br>+33 00 00 00 00 00</p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>75001 Paris<br>France</p>
+        </div>
+      </div>
+    </div>
 
+    <div class="footer-bottom">
+      <p>Copyright © 2021 AGENCECO – All rights reserved</p>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <!-- SCRIPT DE CONNEXION -->
   <script>
     document.getElementById('loginForm').addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -112,10 +137,13 @@
       const data = await res.json();
       if (res.ok) {
         localStorage.setItem('token', data.token);
-        window.location.href = 'actualites.html';
+        window.location.href = 'actualités.html';
       } else {
         alert(data.message);
       }
+
     });
   </script>
+
+</body>
 </html>
