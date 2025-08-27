@@ -88,7 +88,7 @@ h1, h2 { /* Sélecteur pour les titres h1 et h2 */
 
   background-color: #fff; /* Couleur de fond du header */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour un effet de profondeur */
-  position: fixed; /* Fixe le header en haut de la page */
+  position: relative; /* Fixe le header en haut de la page */
   width: 100%; /* Prend toute la largeur de l'écran */
   z-index: 1000; /* Assure que le header est au-dessus des autres éléments */
 }
@@ -109,7 +109,7 @@ h1, h2 { /* Sélecteur pour les titres h1 et h2 */
   display: flex; /* Affiche les éléments du menu en ligne */
   gap: 3.5rem; /* Espace entre les éléments du menu */
   margin: 0; /* Supprime la marge par défaut */
-  margin-left: 20rem; /* Ajustement pour l'espacement */
+  margin-left: 5rem; /* Ajustement pour l'espacement */
   padding: 0; /* Supprime le padding par défaut */
   font-size: 1.5rem; /* Taille de police du menu */
   
@@ -323,114 +323,110 @@ section {
   flex: 1 1 250px; /* permet à chaque bloc de s'étendre également */
 }
 
-/* ✅ SECTION ARTICLES*/
-#actus {
-  background-color: #f2f2f2; /* Couleur de fond de la section Actus */  
-  padding: 60px 20px; /* Espace intérieur en haut et en bas */
-  text-align: center; /* Centre le texte de la section Actus */
+/* -------------------- SECTION ACTUALITÉS -------------------- */
+
+/* Titre des actualités */
+.articles-section h1,
+.articles-section h2,
+main h1 {
+  text-align: center;
+  color: #2e7d32; /* vert foncé */
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0;
 }
 
-.card-article {
-  background-color: #3c9c6e;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px;
-  color: white;
-}
-
-.card-article h3 {
-  font-size: 20px;
-  background-color: #469B61; /* Couleur de fond du titre de l'article */
-  margin-bottom: 10px;
-}
-
-.card-article .date {
-  font-size: 14px;
-  color: #c8e6c9;
-}
-
-.boutons {
+/* Container des articles */
+#articles {
   display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 10px;
+  flex-direction: column;
+  gap: 2rem; /* espace entre les cartes */
+  max-width: 66.2rem;
+  margin: 2rem auto;
+  padding: 0 15px;
 }
 
-.btn-modifier {
-  background-color: orange;
-  border: none;
-  padding: 5px 12px;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
+/* Carte d'article */
+.article {
+  background-color: #4caf50; /* vert moyen */
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-.btn-supprimer {
-  background-color: red;
-  border: none;
-  padding: 5px 12px;
-  position: end;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-ajouter {
-  background-color: #FFAA00; /* Couleur de fond du bouton Ajouter */
-  border: none;
-  padding: 10px 20px;
-  font-weight: bold;
-  border-radius: 6px;
-  margin: 20px;
-  cursor: pointer;
-}
-
-
-#actus h2 {
-  color: #469B61; /* Couleur du titre de la section Actus */
-  background-color: #469B61 ; /* Couleur de fond du titre de la section Actus */
-  font-size: 2.2em; /* Taille de la police du titre */
-  margin-bottom: 30px; /* Espace en dessous du titre */
-}
-
-#actus-container {
-  display: flex; /* Utilise Flexbox pour l'alignement des articles */
-  background-color: #469B61; /* Couleur de fond du conteneur des articles */
-  flex-direction: column; /* Affiche les articles en colonne */
-  gap: 15%; /* Espace entre les articles */   
-  max-width: 100%; /* Largeur maximale du conteneur des articles */
-  margin: 0 auto; /* Centre le conteneur des articles horizontalement */
-}
-
-.articles-section {
-  background-color: #469B61; /* Couleur de fond des articles */
-  color: white; /* Couleur du texte des articles */
-  padding: 20px 25px; /* Espace intérieur des articles */
-  border-radius: 10px; /* Bords arrondis des articles */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* Ombre pour un effet de profondeur */
-  text-align: center; /* Aligne le texte au centre */
-}
-
+/* Titre d'article */
 .article h3 {
-  color: #ffffff; /* Couleur du titre de l'article */
-  background-color: #469B61; /* Couleur de fond du titre de l'article */
-  margin-bottom: 10px; /* Espace en dessous du titre */  
+  display: flex;
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
+/* Description */
 .article p {
-  color: #ffffff; /* Couleur du texte de l'article */
-  font-size: 1em; /* Taille de la police du texte de l'article */
-  background-color: #469B61; /* Couleur de fond du texte de l'article */
-  margin-bottom: 10px; /* Espace en dessous du texte de l'article */
+  margin: 5px 0;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
-.article .date {
-  font-size: 0.9em; /* Taille de la police de la date */
-  color: #ffffff; /* Couleur du texte de la date */
-  background-color: #469B61; /* Couleur de fond de la date */
+/* Date */
+.article small {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
+
+/* Boutons admin */
+.btn-admin {
+  background: #FFAA00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-admins {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-admin:hover {
+  background: #388e3c;
+  color: #fff;
+}
+
+/* Bouton Ajouter une actualité */
+#ajout-btn {
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+  background: #C8FF00;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  width: 15rem;
+}
+
+#ajout-btn:hover {
+  background: #1b5e20;
+}
+
 
 /* ✅ SECTION CONTACT */
 #contact {
@@ -796,6 +792,7 @@ section {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  text-decoration: none;
 }
 /* Bouton de connexion */
 .connect-btn:hover {

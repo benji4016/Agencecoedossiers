@@ -35,9 +35,9 @@
 </header>
 
 <main>
-  <h1>Liste des Actualités</h1>
-  <div id="articles"></div>
+  <h1>Nos Actualités</h1>
   <a href="ajout-actualités.html" id="ajout-btn" class="btn-admin invisible">Ajouter une actualité</a>
+  <div id="articles"></div>
 </main>
 
 <script>
@@ -62,7 +62,7 @@
         <small>${article.publicationDate}</small><br><br>
         <div style="text-align: right;">
           <button class="btn-admin ${visibleClass}" onclick="window.location='modifier-actualite.html?id=${article.id}'">Modifier</button>
-          <button class="btn-admin ${visibleClass}" onclick="supprimer(${article.id})">Supprimer</button>
+          <button class="btn-admins ${visibleClass}" onclick="supprimer(${article.id})">Supprimer</button>
         </div>
       `;
       container.appendChild(div);

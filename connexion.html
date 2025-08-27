@@ -137,7 +137,7 @@
       const data = await res.json();
       if (res.ok) {
         localStorage.setItem('token', data.token);
-        window.location.href = 'actualités.html';
+        window.location.href = 'blog.html';
       } else {
         alert(data.message);
       }
