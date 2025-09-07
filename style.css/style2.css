@@ -342,6 +342,7 @@ main h1 {
   flex-direction: column;
   gap: 2rem; /* espace entre les cartes */
   max-width: 66.2rem;
+  justify-content: space-between;
   margin: 2rem auto;
   padding: 0 15px;
 }
@@ -351,7 +352,7 @@ main h1 {
   background-color: #4caf50; /* vert moyen */
   color: #fff;
   border-radius: 0.5rem;
-  padding: 0;
+  padding: 0.5rem;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
@@ -374,12 +375,18 @@ main h1 {
 /* Date */
 .article small {
   display: block;
+  text-align: justify;
   margin-bottom: 10px;
   font-size: 0.9rem;
   opacity: 0.9;
 }
 
 /* Boutons admin */
+.boutons {
+  display: flex;
+  gap: 10px;
+}
+
 .btn-admin {
   background: #FFAA00;
   color: white;
@@ -847,6 +854,147 @@ i {
   justify-content: center;
   border: #555 3rem solid;
   gap: 1rem;
+}
+
+/* === Page Modifier une Actualité === */
+h1 {
+  text-align: center;
+  margin: 40px 0;
+  color: #4CAF50; /* vert doux comme dans ta capture */
+  font-size: 2.5rem;
+}
+
+/* Conteneur du formulaire */
+#formModif {
+  max-width: 900px;
+  margin: 5rem auto;
+  background-color: #12343b; /* bleu foncé */
+  padding: 40px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Champs de saisie */
+#formModif input,
+#formModif textarea {
+  width: 100%;
+  padding: 15px;
+  text-align: justify;
+  border: 2px solid white;
+  border-radius: 6px;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+#formModif input::placeholder,
+#formModif textarea::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+/* Conteneur des boutons */
+#formModif .form-buttons {
+  display: flex;
+  justify-content: center; /* centre les boutons */
+  gap: 2rem; /* espace entre les deux */
+  margin-top: 2rem;
+}
+
+/* Bouton sauvegarder */
+#formModif .btn-save {
+  background-color: #C8FF00; /* vert fluo */
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+#formModif .btn-save:hover {
+  background-color: #b3e600;
+}
+
+/* Bouton suppression */
+#formModif .btn-delete {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+#formModif .btn-delete:hover {
+  background-color: darkred;
+}
+
+
+/* === Page Ajouter une Actualité === */
+h1 {
+  text-align: center;
+  margin: 40px 0;
+  color: #4CAF50; /* vert doux comme sur la maquette */
+  font-size: 2.5rem;
+}
+
+/* Conteneur du formulaire */
+#formAjout {
+  max-width: 900px;
+  margin: 5rem auto;
+  background-color: #12343b; /* bleu foncé */
+  padding: 40px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Champs de saisie */
+#formAjout input,
+#formAjout textarea {
+  width: 100%;
+  padding: 15px;
+  text-align: justify;
+  border: 2px solid white;
+  border-radius: 6px;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+#formAjout input::placeholder,
+#formAjout textarea::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+/* Bouton central */
+#formAjout button {
+  background-color: #ccff00; /* vert fluo */
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  cursor: pointer;
+  align-self: center;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+#formAjout button:hover {
+  background-color: #b3e600; /* un peu plus foncé au survol */
 }
 
 

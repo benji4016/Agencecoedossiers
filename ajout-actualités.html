@@ -8,7 +8,22 @@
 </head>
 <body>
   <!-- Ton contenu ici -->
-
+<header>
+    <nav id="main-nav"> <!-- Navigation principale -->
+      <div class="logo"> <!-- Logo de l'agence -->
+        <a href="#accueil">Agenceco</a> <!-- Nom de l'agence avec lien vers la section Accueil -->
+      </div>
+      <ul class="menu"> <!-- Menu de navigation -->
+         <li><a href="#accueil">Accueil</a></li>  
+         <li><a href="#equipe">Notre équipe</a></li> 
+         <li><a href="#nos-services">Services</a></li> 
+         <li><a href="#temoignages">Témoignages</a></li> 
+         <li><a href="#contact">Contactez-nous</a></li> 
+         <li><a href="blog.html">Actualités</a></li>  
+      </ul>
+      <div class="burger" aria-label="Ouvrir le menu" role="button" tabindex="0"></div> <!-- Menu burger -->
+    </nav>
+</header>
   <script src="script.js"></script> <!-- ← Ton JS si besoin -->
 </body>
 </html>
@@ -18,8 +33,53 @@
     <input type="text" name="title" placeholder="Titre" required />
     <input type="text" name="description" placeholder="Description" required />
     <textarea name="content" placeholder="Contenu..." rows="6" required></textarea>
-    <button type="submit">Créer</button>
+    <button type="submit">Sauvegarder</button>
   </form>
+
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Content</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+      <div class="footer-col">
+        <h4>Informations</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+      <div class="footer-col">
+        <h4>Aide</h4>
+        <p>consectetur</p>
+        <p>adipiscing</p>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <div class="contact-item">
+        <i class="fas fa-phone"></i> 
+        <p>+33 00 00 00 00 00<br>+33 00 00 00 00 00</p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i> 
+        <p>75001 Paris<br>France</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright © 2021 AGENCECO – All rights reserved</p>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
 
   <script>
     document.getElementById('formAjout').addEventListener('submit', async (e) => {
